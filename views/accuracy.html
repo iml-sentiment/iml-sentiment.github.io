@@ -1,0 +1,106 @@
+<div ng-show="iterNum>=0" >
+    <!-- line chart showing the accuracy change -->
+
+    <!--Configuration -->
+    <div class="row">
+                <div class = col-md-7>
+                <div class="element-view-header"><div class="element-view-title">Configuration: Display F1</div></div>
+                    <div id="element-view-container-inner">
+                        <ng-form class = "displayF1" ng-repeat="method in displayF1_methodArr">
+                            <span class="col-md-4">
+                                <label class="radio-inline">
+                                <input ng-model=$parent.$parent.displayF1_method ng-change="displayF1();"
+                                       type="radio" name="relevant-radio"
+                                       id="relevant-radio" ng-value="method.value"/>{{ method.name }}</label></span>
+                        </ng-form><!-- displayF1-->
+                    </div>
+                </div>
+
+                 <div class = col-md-5>
+                <div class="element-view-header"><div class="element-view-title">Configuration: Select Examples</div></div>
+                    <div id="element-view-container-inner">
+                        <ng-form class = "selectExample" ng-repeat="method in example_methodArr">
+                            <span class="col-md-6">
+                                <label class="radio-inline">
+                                <input ng-model=$parent.$parent.example_method ng-change="selectExamples();"
+                                       type="radio" name="example-radio"
+                                       id="example-radio" ng-value="method.value"/>{{ method.name }}</label></span>
+                        </ng-form><!-- displayF1-->
+                    </div>
+                </div>
+            </div>
+
+    <div class = row>
+        <div class = col-md-6>
+            <div class="element-view-header">
+                <div class="element-view-title">Iteration Log</div>
+            </div>
+
+            <div id="element-view-container-inner"
+                 class="element-view-container-inner">
+                 <table class="table table-striped">
+                     <tr>
+                         <th>Feature</th><th>Keep?</th><th>t(s)</th>
+                         <th>Method F1</th><!--<th>Method examples</th>-->
+                         <th>F1_de/true<br/>keep/del</th>
+                         <th>F1_dev/show<br/>keep/del</th>
+                         <th>F1_test<br/>keep/del</th>
+                     </tr>
+                     <tr class="active" ng-repeat="iter in iterlog track by $index">
+                         <td>{{ iter.feature }}</td>
+                         <td>{{ iter.ifKeep }}</td>
+                         <td>{{ iter.duration }}</td>
+                         <td>{{ iter.displayF1_method }}</td>
+                         <!--<td>{{ iter.example_method }}</td>-->
+                         <td>
+                             <span ng-class= "{'highlightChoice': iter.ifKeep=='keep',
+                                'highScore': iter.F1.dev.true.keep > iter.F1.dev.true.del}">
+                                {{ iter.F1.dev.true.keep.toFixed(3) }}</span>/
+                             <span ng-class= "{'highlightChoice': iter.ifKeep=='del',
+                                'highScore': iter.F1.dev.true.keep < iter.F1.dev.true.del}">
+                                 {{ iter.F1.dev.true.del.toFixed(3) }}</span>
+                         </td>
+
+                         <td>
+                             <span ng-class= "{'highlightChoice': iter.ifKeep=='keep',
+                                'highScore': iter.F1.dev.display.keep > iter.F1.dev.display.del}">
+                                {{ iter.F1.dev.display.keep.toFixed(3) }}</span>/
+                            <span ng-class= "{'highlightChoice': iter.ifKeep=='del',
+                                'highScore': iter.F1.dev.display.keep < iter.F1.dev.display.del}">
+                                {{ iter.F1.dev.display.del.toFixed(3) }}</span>
+                         </td>
+
+                          <td>
+                              <span ng-class= "{'highlightChoice': iter.ifKeep=='keep',
+                         'highScore': iter.F1.test.keep > iter.F1.test.del}">
+                              {{ iter.F1.test.keep.toFixed(3) }}</span>/
+                             <span ng-class= "{'highlightChoice': iter.ifKeep=='del',
+                         'highScore': iter.F1.test.keep < iter.F1.test.del}">
+                                 {{ iter.F1.test.del.toFixed(3) }}</span>
+                          </td>
+                     </tr>
+                 </table>
+                <button ng-click="saveLog()" class="btn btn-default"
+                                id = "submit" role="button">Save Log</button>
+            </div>
+        </div>
+        <div class = col-md-6>
+            <div class="element-view-header">
+                <div class="element-view-title">Accuracy View</div>
+            </div>
+            <div id="element-view-container-inner"
+                 accuracy-directive
+                 class="element-view-container-inner"
+                 data="data">
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="element-view-header">
+        <div class="element-view-title">ModelTracker View</div>
+    </div>
+    <div id="element-view-container-inner"
+         class="element-view-container-inner-60"
+         modeltracker-directive
+         data="data"></div>-->
+</div>

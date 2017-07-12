@@ -1,0 +1,37 @@
+<h2>Post-training Quiz</h2>
+
+
+<p>We want to make sure that you understand the instructions so here are a few questions:</p>
+<form name="quiz" class="resize">
+    <fieldset ng-repeat="question in quizQuestions" class="form-group row">
+
+        <p class="interview-header highlight-text">{{ question.text }}</p>
+        <div class="textbox resize" ng-show='question.img!==false' >
+        <img class="resize-img" src="{{ question.img }}"/></div>
+        <label class="form-check-label">
+            <input ng-model="question.setAnswer"
+                   class="form-check-input question-choice"
+                   type="radio" name="question-{{question.id}}"
+                   id="question-{{question.id}}-true" value=true>Yes</label>
+        <label class="form-check-label">
+            <input ng-model="question.setAnswer"
+                   class="form-check-input question-choice"
+                   type="radio" name="question-{{question.id}}"
+                   id="question-{{question.id}}-false" value=false>No</label>
+        <br/>
+        <div ng-show="question.setAnswer === question.answer"
+             class="large-text label label-success">{{ question.cHint }}</div>
+        <div ng-show="question.setAnswer !== question.answer &&
+                    question.setAnswer !== undefined"
+             class="large-text label label-danger">{{ question.iHint }}</div>
+
+    </fieldset>
+</form>
+
+<div ng-show=!running class="hint-text">Please pass the quiz before you start...</div>
+<div ng-show=running class="hint-text">Running...</div>
+<br/>
+<div class="row">
+    <button class="btn btn-success"
+            ng-click=start() role="button">START!!</button>
+</div>

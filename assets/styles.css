@@ -1,0 +1,378 @@
+
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.yAxis {
+    y: 6;
+    dy: .71em;
+    text-anchor: end;
+}
+
+.axis text {
+    font-size: 10px;
+    text-stroke: white;
+    stroke:white;
+    stroke-width:0.2
+}
+
+
+.rect-pos {
+    fill-opacity: 1;
+    stroke-opacity: 0;
+    stroke-width: 2;
+}
+
+.rect-neg {
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke-width: 2;
+}
+
+.spark path{
+}
+
+.barLabel {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.doc_text {
+    font-color: red;
+}
+
+.doclistLabel {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+.bucket5 {  color: #c7c7c7;  }
+#bucketRange .slider-track-high {  background: #4e4e4e;  }
+#bucketRange .slider-selection {  background: #969696;  }
+#bucketRange .slider-track-low {  background: #bdbdbd;  }
+/*
+.bucket0 {  font-weight: bold; color: black;  }
+.bucket1 {  font-weight: bold; color: #7f7f7f;  }
+.bucket2 {  font-weight: bold; color: #636363;  }
+.bucket3 {  font-weight: bold; color: #969696;  }
+.bucket4 {  color: #bdbdbd;  }
+.bucket5 {  color: #c7c7c7;  }
+.bucket6 {  color: #d9d9d9;  }
+*/
+.mode {background-color: #f3f3f3; font-weight: bold; font-style:italic;}
+/*.mode {color: black}*/
+/*hover feature*/
+.bucket0.pos {   color: #e6550d;}
+.bucket1.pos {  color: #fd8d3c;}
+.bucket2.pos {  color: #fdd0a2;}
+.bucket3.pos {  color: #ffe2cf;}
+.bucket4.pos {  color: #ffe2cf;}
+
+/*.bucket3.pos.rankHighFeature {  background-color: #fdae6b;}*/
+
+
+.bucket0.neg {   color: #3182bd;}
+.bucket1.neg {  color: #6baed6;}
+.bucket2.neg {  color: #9ecae1;}
+.bucket3.neg {  color: #d6e2ef;}
+.bucket4.neg {  color: #d6e2ef;}
+
+
+/*edit feature*/
+/*
+.bucket.pos.edit:not(.mode) {  color: #e6550d;}
+.bucket0.pos.edit:not(.mode) {  color: #fd8d3c;}
+.bucket1.pos.edit:not(.mode) {  color: #fdd0a2;}
+.bucket2.pos.edit:not(.mode) {  color: #ffe2cf;}
+.bucket3.pos.edit:not(.mode) {  color: #ffe2cf;}
+
+.bucket.neg.edit:not(.mode) {  color: #3182bd;}
+.bucket0.neg.edit:not(.mode) {  color: #6baed6;}
+.bucket1.neg.edit:not(.mode) {  color: #9ecae1;}
+.bucket2.neg.edit:not(.mode) {  color: #c6dbef;}
+.bucket3.neg.edit:not(.mode) {  color: #c6dbef;}
+*/
+/*.edit.mode {  color: black;}*/
+
+/*select feature*/
+.addFeature {text-decoration: underline}
+.deleteFeature {text-decoration: line-through}
+
+.addLabel {fill: green}
+.deleteLabel {fill: grey}
+.useLabel {fill: blue}
+
+.selectedFeature {font-weight: bold}
+
+
+.disableGram {
+    color: #c7c7c7!important;
+    font-weight: normal!important;
+    background-color: transparent!important;}
+
+.markLine {
+    stroke-width: 1;
+    stroke: grey;
+    stroke-dasharray: 3, 3;
+}
+
+.markLine_residual {
+    stroke-width: 1;
+    stroke: grey;
+}
+
+.logtable {
+    /*
+    table-layout:fixed;
+    word-wrap:break-word;
+    word-break:break-all;
+    */
+    width:100%;
+    text-align: center;
+    align: center;
+}
+
+.logtable td, th {
+    text-align: center;
+
+}
+
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+.taskQuestion{
+    font-size: 17px;
+    display:block;
+    text-align:center;
+    background-color: #f5e79e;
+}
+
+.improveNotice{
+    ont-size: 13px;
+    display:block;
+    font-style: italic;
+    text-align:center;
+}
+
+.selectOpt {
+    stroke: red;
+    stroke-width: 3;
+}
+
+.radioName {
+    font-size: 17px;
+    display:block;
+    /*text-align: center;*/
+}
+
+.f1score {
+    font-size: 27px;
+    display:block;
+    text-align: center;
+    color: red;
+}
+
+.feature {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.intextFeature {
+    font-weight: bold;
+    color: red;
+}
+
+.blockFeature {
+    background-color: red;
+}
+
+.selectScore {
+    background-color: #f5e79e;
+}
+
+.highlightChoice {
+    background-color: #f5e79e;
+    display: inline;
+}
+
+.highScore{
+    color: red;
+    font-weight: bold;
+}
+
+.btn {
+    margin:auto; display:block;
+}
+
+.IgnoreBtn {margin-left:10px; display:block;}
+.IncludeBtn {margin-right:10px; display:block;}
+
+/*-------------------------------*/
+#div
+{
+	border: 1px dotted red;
+	width: 200px;
+	height: 500px;
+}
+.right {
+	text-align: left;
+}
+.left {
+	text-align: right;
+}
+.center {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+}
+
+
+.betterOpt {  font-weight:bold; color: #fd8d3c}/**/
+.worseOpt { font-weight:bold; color: #6baed6 }
+
+
+.betterlabel {  font-weight:bold; background-color: #fd8d3c}
+.worselabel { font-weight:bold; background-color: #6baed6 }
+
+.left.carousel-control,.right.carousel-control{
+    filter:none;
+    background: none;
+}﻿​
+
+
+
+
+
+.carousel-indicators {
+    background-color: #444;
+    background-color: rgba(70,70,70,.25);
+}
+
+.glyphicon.glyphicon-chevron-left {  color:#444;  }
+.glyphicon.glyphicon-chevron-right {  color:#444;  }
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+    background-color: #444;
+    background-color: rgba(70,70,70,.25);
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.carousel-indicators li.active
+{
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.resize {
+    width:80%;
+    margin: auto
+}
+.resize-img{
+    width: 100%;
+    margin-left: 0px;
+}
+
+
+.table-condensed>thead>tr>th,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>tbody>tr>td,
+.table-condensed>tfoot>tr>td{
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1.25vh;
+    padding-bottom: 1.25vh;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+}
+
+.jumbotron{
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+.hint-text{
+    text-align: center;
+    color: darkgrey;
+    font-style: italic;
+    margin: auto;
+    font-size: 18px;
+}
+
+.large-text {
+    font-size: 14px;
+
+}
+
+.textbox {
+    border:1px #000 solid;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.highlight-text{
+    font-weight: bold;
+    color: blue;
+}
+
+
+.highlight {
+  font-weight: bold;
+}

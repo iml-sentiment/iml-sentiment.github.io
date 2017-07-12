@@ -1,0 +1,112 @@
+<h2>Instructions</h2>
+<p>Please read carefully the following instructions.
+Use the arrows <span class="glyphicon glyphicon-chevron-left"></span> and <span class="glyphicon glyphicon-chevron-right"></span>
+    on the left/right to change pages. You will be
+able to start the task when you reach the fifth page.</p>
+
+<div id="carousel-example-generic" class="carousel" data-interval=false
+     data-wrap=false>
+  <!-- Indicators -->
+    <ol class="carousel-indicators carousel-indicators-numbers">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+     <div class="item active fix-height">
+          <div class="resize">
+              <div class="col-md-4">
+                <p>In this HIT, you will help us collect a set of words useful for machines to
+                    analyze the <span class="highlight">sentiment of movie reviews</span>.
+                    There are <span class="highlight">50</span> tasks awaiting,
+                    each provides one word for you to determine if it is relevant
+                    for understanding whether movie reviews are
+                    <span class="highlight">positive or negative</span>.
+                    The task number is shown on the top.
+                </p>
+              </div>
+               <div class="col-md-8">
+                  <img class="resize-img" src="../assets/img/taskNum.png" alt="..."></div>
+      </div>
+
+    </div>
+    <div class="item fix-height">
+      <div class="resize">
+          <div class="col-md-4">
+               <p>Take the task on <span class="highlight">"film"</span>
+                    for example, you will need to determine if you want
+                    to consider <span class="highlight">("Include")</span>
+                    this word or not <span class="highlight">("Ignore")</span> when analyzing the sentiments
+                    of movie reviews. You are given sample review fragments containing the word
+                    "film" for reference. "film" are all bolded and put in the center.
+                </p>
+              </div>
+               <div class="col-md-8">
+                   <img class="resize-img" src="../assets/img/example.png" alt="..."></div>
+      </div>
+
+    </div>
+    <div class="item fix-height">
+      <div class="resize">
+          <div class="col-md-4">
+              <p> As you tackle the task, the <span class="highlight">computer</span>
+                  will estimate with <span class="highlight"> scores how effective
+                including/ignoring</span> the word is for it to judge the sentiments of
+                  reviews similar to the examples provided. <span class="highlight">
+                      It might help you with your decision-</span>
+                  the higher the score, the better the computer can make
+                the call. The score lies in the range of 0-100.
+              </p>
+          </div>
+          <div class="col-md-8">
+              <img class="resize-img" src="../assets/img/score.png" alt="..."></div>
+      </div>
+    </div>
+      <div class="item fix-height">
+      <div class="resize">
+          <div class="col-md-4">
+              <p>We display the scores right after the options you can take
+              (Include/Ignore), with the higher scored one highlighted with an
+              <span class="betterOpt">orange</span>
+              background <span class="label betterlabel">Ignore, 92.751</span>,
+              and the other one with <span class="worseOpt">blue</span>
+                  <span class="label worselabel">Include, 34.903</span>.
+                  <span class="highlight">Please note the estimate could be inaccurate in many cases.</span>
+              </p>
+          </div>
+          <div class="col-md-8">
+              <img class="resize-img" src="../assets/img/score.png" alt="..."></div>
+      </div>
+    </div>
+      <div class="item fix-height">
+      <div class="resize">
+          <div class="col-md-4">
+              <p>You should submit your decision with
+                on one of the the two submit buttons.
+            Submit your decision to move to the next task.
+              </div>
+               <div class="col-md-8">
+                   <img class="resize-img" src="../assets/img/submit.png" alt="..."></div>
+          <div class="row">
+              <button class="btn btn-success"
+                      ng-click=currentStage('quiz') role="button">I understand!!</button>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+  </a>
+</div> <!-- Carousel -->

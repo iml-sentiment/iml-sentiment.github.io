@@ -1,0 +1,53 @@
+<h2>Post-task Questionnaire</h2>
+
+<p>Thank you for completing the tasks! In retrospect to your process, please answer the following question by selecting the
+appropriate radios. From left to right, each radio represents <span class="highlight">
+        strongly disagree, disagree, neutral, agree, and strongly agree.
+    </span></p>
+
+<form id="interview_form" class="interview_form resize"  style="margin: auto; padding:auto">
+    <p class="interview-header">I read the example reviews provided carefully.</p>
+    <label for="example_1">Strongly disagree</label>
+    <input type="radio" name="example" id="example_1" value="1" ng-model="interview.example" required="required">
+    <input type="radio" name="example" id="example_2" value="2" ng-model="interview.example">
+    <input type="radio" name="example" id="example_3" value="3" ng-model="interview.example">
+    <input type="radio" name="example" id="example_4" value="4" ng-model="interview.example">
+    <input type="radio" name="example" id="example_5" value="5" ng-model="interview.example">
+    <label class="form-check-label" for="example_5">Strongly agree</label>
+    <hr/>
+
+    <p class="interview-header">The computer's estimated score is important for me.</p>
+    <label for="example_1">Strongly disagree</label>
+    <input type="radio" name="score_i" id="score_i_1" value="1" ng-model="interview.score_i" required="required">
+    <input type="radio" name="score_i" id="score_i_2" value="2" ng-model="interview.score_i">
+    <input type="radio" name="score_i" id="score_i_3" value="3" ng-model="interview.score_i">
+    <input type="radio" name="score_i" id="score_i_4" value="4" ng-model="interview.score_i">
+    <input type="radio" name="score_i" id="score_i_5" value="5" ng-model="interview.score_i">
+    <label class="form-check-label" for="score_i_5">Strongly agree</label>
+    <hr/>
+
+
+    <p class="interview-header">I think the computer's estimated score is
+        accurate.</p>
+    <label for="score_1">Strongly disagree</label>
+    <input type="radio" name="score" id="score_1" value="1" ng-model="interview.score" required="required">
+    <input type="radio" name="score" id="score_2" value="2" ng-model="interview.score">
+    <input type="radio" name="score" id="score_3" value="3" ng-model="interview.score">
+    <input type="radio" name="score" id="score_4" value="4" ng-model="interview.score">
+    <input type="radio" name="score" id="score_5" value="5" ng-model="interview.score">
+    <label for="score_5">Strongly agree</label>
+    <hr/>
+
+    <p class="interview-header">I mostly make the decisions based on my
+        prior understanding of the words' polarity.</p>
+    <label for="polarity_1">Strongly disagree</label>
+    <input type="radio" name="polarity" id="polarity_1" value="1" ng-model="interview.polarity" required="required">
+    <input type="radio" name="polarity" id="polarity_2" value="2" ng-model="interview.polarity" >
+    <input type="radio" name="polarity" id="polarity_3" value="3" ng-model="interview.polarity" >
+    <input type="radio" name="polarity" id="polarity_4" value="4" ng-model="interview.polarity" >
+    <input type="radio" name="polarity" id="polarity_5" value="5" ng-model="interview.polarity" >
+    <label for="polarity_5">Strongly agree</label>
+</form>
+<div class="col-md-12">
+    <button ng-click="submit()" class="btn btn-primary" id = "submitBtn" role="button">Submit!</button>
+</div>

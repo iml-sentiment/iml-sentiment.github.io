@@ -1,0 +1,47 @@
+<!--Task name -->
+<h2>Task {{ iterNum + 1 }} / {{ totalIter }}</h2>
+<div class =row>
+    <!-- Task question -->
+    <p class="taskQuestion">
+            When determining if movie reviews are positive or negative,
+            Should the word "<span class="feature">{{ feature.word }}</span>" be included or ignored?</p>
+    <div class="col-md-5">
+
+        <!-- Performance score-->
+        <div class = col-md-12 ng-include src="'../views/select.html'"></div>
+        <!-- One sentence summary of the improvement -->
+        <p class="improveNotice"><span class = 'betterOpt'>{{ betterOpt }}</span>
+            "{{ feature.word }}"is predicted to {{ action }} the performance compared to
+            <span class = 'worseOpt'>{{ worseOpt }}</span> it.</p><!-- end summary -->
+    </div><!--End of question -->
+    <!--Exmaple-->
+    <div class="col-md-7">
+        <div class="element-view-header"><div class="element-view-title">Examples</div></div>
+        <div id="element-view-container-inner" class="element-view-container-inner">
+            <table class="table table-condensed table-striped">
+                <tr ng-repeat="doc in doclist">
+                                <!--<td ng-bind-html="doc"></td>-->
+                    <td class="left">{{ doc.pre }}</td>
+                    <td class="center feature">{{ doc.cur }}</td>
+                    <td class="right">{{ doc.post }}</td>
+                </tr>
+            </table>
+        </div>
+    </div><!-- end of example -->
+</div><!-- one task -->
+<!-- Submit buttons -->
+
+<div ng-show=!running class="hint-text">Please select one!</div>
+<div ng-show=running class="hint-text">Running...</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <button ng-model="ifInclude" value="include"
+                ng-click="nextIter('include')" class="btn btn-primary IncludeBtn iterBtn"
+                id = "IncludeBtn" role="button">Include</button></div>
+    <div class="col-md-6">
+        <button ng-model="ifInclude" value="ignore"
+                ng-click="nextIter('ignore')" class="btn btn-primary IgnoreBtn iterBtn"
+                id = "IgnoreBtn" role="button">Ignore</button></div>
+</div><!-- end submit buttons -->
+<hr/>
