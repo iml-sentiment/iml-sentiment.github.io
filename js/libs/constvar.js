@@ -9,12 +9,12 @@ const quizQuestions = [
     },
     {
         id: 1,
-        text: 'The score indicates that the computer estimates that considering "impressive" ' +
+        text: 'The score indicates that the computer estimates that ignoring "impressive" ' +
         'makes it determine sentiments more effectively.',
         cHint: 'Correct! The computer estimated score favors considering "impressive". ',
         iHint: '"Consider" receives higher score (80) in the panel, meaning that ' +
         'considering the word "impressive" makes the computer more effective. ',
-        img: '../assets/img/quiz.jpg',
+        img: '../assets/img/quiz.png',
         answer: 'false'
     },
 
