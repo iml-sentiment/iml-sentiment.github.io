@@ -78,7 +78,8 @@ function ($scope, dataService, communService) {
             test:{}
         };
         if ($scope.featureEditlist == null){// input the data for once.
-            $scope.featureEditlist = featurelist;
+            $scope.featureEditlist = shuffle(featurelist.slice(0, $scope.totalIter))
+                .concat(featurelist.slice($scope.totalIter));
             $scope.examples = examples;
             $scope.testedArr = [];
             $scope.tottestArr = clone($scope.featureEditlist);

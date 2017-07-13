@@ -37,27 +37,23 @@ if (!Array.prototype.last){
     Array.prototype.last = function(){
         return this[this.length - 1];
     };
-};
-
-// get random subarray.
-function getRandomSubarray(arr, size) {
-    var shuffled = arr.slice(0), i = arr.length, temp, index;
-    while (i--) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-    }
-    return shuffled.slice(0, size);
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
 
-Array.prototype.sortIndices = function (func) {
-    var i = j = this.length, that = this;
-    while (i--) {this[i] = { k: i, v: this[i] };}
-    this.sort(function (a, b) {
-        return func ? func.call(that, a.v, b.v) :
-            a.v < b.v ? -1 : a.v > b.v ? 1 : 0;
-    });
-    while (j--) {this[j] = this[j].k;}
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }

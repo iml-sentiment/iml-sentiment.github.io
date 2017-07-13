@@ -30,6 +30,7 @@ const quizQuestions = [
 ]
 
 const featurelist = [
+    /*
     {
         "word": "impressive",
         "F1": {
@@ -52,6 +53,7 @@ const featurelist = [
             'ignore': 43
         }
     },
+    */
     {
         "word": "worst",
         "F1": {
