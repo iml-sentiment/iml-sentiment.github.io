@@ -190,9 +190,6 @@ function ($scope, dataService, communService) {
             }
             $scope.code = 'P' + timestamp.toString() + getRandomInt(1000, 9999).toString();
 
-            alert('Thank you for participating in the study! ' +
-                'Please submit the code to get your reward: P', timestamp);
-            close();
 
         }
     };
