@@ -31,6 +31,8 @@ function ($scope, dataService, communService) {
             $scope.stage = 'task';
         else if ($scope.iterNum >= $scope.totalIter)
             $scope.stage = 'survey';
+        else if ($scope.stage == 'complete')
+            $scope.stage = 'complete';
         else
             $scope.stage = 'intro';
     };
@@ -180,7 +182,8 @@ function ($scope, dataService, communService) {
                 interview: $scope.interview,
                 timestamp:timestamp
             });
-            alert('Thank you for participating in the study! You can now close the window.');
+            alert('Thank you for participating in the study! ' +
+                'Please submit the code to MTurk to get your reward: P', timestamp.toString(16));
             close();
 
         }
