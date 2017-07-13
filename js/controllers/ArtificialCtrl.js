@@ -182,7 +182,13 @@ function ($scope, dataService, communService) {
                 interview: $scope.interview,
                 timestamp:timestamp
             });
-            $scope.code = p + timestamp.toString();
+
+            function getRandomInt(min, max) {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+            }
+            $scope.code = 'P' + timestamp.toString() + getRandomInt(1000, 9999).toString();
 
             alert('Thank you for participating in the study! ' +
                 'Please submit the code to get your reward: P', timestamp);
