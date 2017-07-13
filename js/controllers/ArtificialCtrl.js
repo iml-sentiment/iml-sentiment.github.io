@@ -182,8 +182,10 @@ function ($scope, dataService, communService) {
                 interview: $scope.interview,
                 timestamp:timestamp
             });
+            $scope.code = p + timestamp.toString();
+
             alert('Thank you for participating in the study! ' +
-                'Please submit the code to MTurk to get your reward: P', timestamp.toString(16));
+                'Please submit the code to get your reward: P', timestamp);
             close();
 
         }
