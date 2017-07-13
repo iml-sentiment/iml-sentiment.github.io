@@ -1,30 +1,30 @@
 const quizQuestions = [
     {
         id: 0,
-        text: 'Your answers will help us analyze reviews similar to the examples.',
-        cHint: 'Correct! Examples provides a general idea about the other reviews.',
-        iHint: 'Examples provides a general idea about the other reviews.',
+        text: 'Your feedback will be used to help teach the computer to judge movie sentiments on its own.',
+        cHint: 'Correct! The machine will learn from you to predict the sentiment of other reviews.',
+        iHint: 'The machine will learn from you to predict the sentiment of other reviews.',
         img: false,
-        answer: 'true',
+        answer: 'true'
     },
     {
         id: 1,
-        text: 'The score panel below indicates the computer understands the review sentiment ' +
-        'if the word "film" is included.',
-        cHint: 'Correct! Ignoring the word "film" makes the computer more effective. ',
-        iHint: '"Ignore" receives higher score (62.254) in the panel, meaning that ' +
-        'ignoring the word "" makes the computer more effective. ',
+        text: 'The score indicates that the computer estimates that considering "impressive" ' +
+        'makes it determine sentiments more effectively.',
+        cHint: 'Correct! The computer estimated score favors considering "impressive". ',
+        iHint: '"Consider" receives higher score (80) in the panel, meaning that ' +
+        'considering the word "impressive" makes the computer more effective. ',
         img: '../assets/img/quiz.jpg',
-        answer: 'false',
+        answer: 'false'
     },
 
     {
         id: 2,
-        text: 'The computer\'s score is always accurate.',
+        text: 'The computer\'s score is always correct.',
         cHint: 'Correct! The computer can be wrong. ',
         iHint: 'Be careful! the computer can be wrong. ',
         img: false,
-        answer: 'false',
+        answer: 'false'
     },
 
 ]
@@ -48,7 +48,7 @@ const featurelist = [
         "polarity": -0.609375,
         "polarity-level": -3,
         "F1": {
-            'include': 80,
+            'consider': 80,
             'ignore': 43
         }
     },
@@ -70,7 +70,7 @@ const featurelist = [
         "polarity": -0.609375,
         "polarity-level": -3,
         "F1": {
-            'include': 29,
+            'consider': 29,
             'ignore': 89
         }
     },
@@ -92,7 +92,7 @@ const featurelist = [
         "polarity": -0.5178571428571429,
         "polarity-level": -3,
         "F1": {
-            'include': 19,
+            'consider': 19,
             'ignore': 24
         }
     },
@@ -114,7 +114,7 @@ const featurelist = [
         "polarity": -0.875,
         "polarity-level": -3,
         "F1": {
-            'include': 82,
+            'consider': 82,
             'ignore': 47
         }
     },
@@ -136,7 +136,7 @@ const featurelist = [
         "polarity": -0.475,
         "polarity-level": -2,
         "F1": {
-            'include': 26,
+            'consider': 26,
             'ignore': 83
         }
     },
@@ -158,7 +158,7 @@ const featurelist = [
         "polarity": -0.375,
         "polarity-level": -2,
         "F1": {
-            'include': 12,
+            'consider': 12,
             'ignore': 96
         }
     },
@@ -180,7 +180,7 @@ const featurelist = [
         "polarity": -0.4,
         "polarity-level": -2,
         "F1": {
-            'include': 10,
+            'consider': 10,
             'ignore': 42
         }
     },
@@ -202,7 +202,7 @@ const featurelist = [
         "polarity": -0.16666666666666666,
         "polarity-level": -2,
         "F1": {
-            'include': 29,
+            'consider': 29,
             'ignore': 74
         }
     },
@@ -224,7 +224,7 @@ const featurelist = [
         "polarity": -0.203125,
         "polarity-level": -2,
         "F1": {
-            'include': 82,
+            'consider': 82,
             'ignore': 89
         }
     },
@@ -246,7 +246,7 @@ const featurelist = [
         "polarity": -0.2916666666666667,
         "polarity-level": -2,
         "F1": {
-            'include': 41,
+            'consider': 41,
             'ignore': 62
         }
     },
@@ -268,7 +268,7 @@ const featurelist = [
         "polarity": -0.15625,
         "polarity-level": -2,
         "F1": {
-            'include': 23,
+            'consider': 23,
             'ignore': 17
         }
     },
@@ -290,7 +290,7 @@ const featurelist = [
         "polarity": -0.15625,
         "polarity-level": -2,
         "F1": {
-            'include': 13,
+            'consider': 13,
             'ignore': 10
         }
     },
@@ -312,7 +312,7 @@ const featurelist = [
         "polarity": -0.4166666666666667,
         "polarity-level": -2,
         "F1": {
-            'include': 76,
+            'consider': 76,
             'ignore': 33
         }
     },
@@ -334,7 +334,7 @@ const featurelist = [
         "polarity": -0.22916666666666666,
         "polarity-level": -2,
         "F1": {
-            'include': 77,
+            'consider': 77,
             'ignore': 43
         }
     },
@@ -356,7 +356,7 @@ const featurelist = [
         "polarity": -0.2916666666666667,
         "polarity-level": -2,
         "F1": {
-            'include': 83,
+            'consider': 83,
             'ignore': 12
         }
     },
@@ -378,7 +378,7 @@ const featurelist = [
         "polarity": -0.0625,
         "polarity-level": -1,
         "F1": {
-            'include': 15,
+            'consider': 15,
             'ignore': 73
         }
     },
@@ -400,7 +400,7 @@ const featurelist = [
         "polarity": -0.0625,
         "polarity-level": -1,
         "F1": {
-            'include': 12,
+            'consider': 12,
             'ignore': 89
         }
     },
@@ -422,7 +422,7 @@ const featurelist = [
         "polarity": -0.13392857142857142,
         "polarity-level": -1,
         "F1": {
-            'include': 57,
+            'consider': 57,
             'ignore': 88
         }
     },
@@ -444,7 +444,7 @@ const featurelist = [
         "polarity": -0.0625,
         "polarity-level": -1,
         "F1": {
-            'include': 45,
+            'consider': 45,
             'ignore': 63
         }
     },
@@ -466,7 +466,7 @@ const featurelist = [
         "polarity": -0.125,
         "polarity-level": -1,
         "F1": {
-            'include': 49,
+            'consider': 49,
             'ignore': 45
         }
     },
@@ -488,7 +488,7 @@ const featurelist = [
         "polarity": -0.052083333333333336,
         "polarity-level": -1,
         "F1": {
-            'include': 88,
+            'consider': 88,
             'ignore': 47
         }
     },
@@ -510,7 +510,7 @@ const featurelist = [
         "polarity": -0.10416666666666667,
         "polarity-level": -1,
         "F1": {
-            'include': 79,
+            'consider': 79,
             'ignore': 10
         }
     },
@@ -532,7 +532,7 @@ const featurelist = [
         "polarity": -0.125,
         "polarity-level": -1,
         "F1": {
-            'include': 77,
+            'consider': 77,
             'ignore': 13
         }
     },
@@ -554,7 +554,7 @@ const featurelist = [
         "polarity": 0.0,
         "polarity-level": 0,
         "F1": {
-            'include': 14,
+            'consider': 14,
             'ignore': 67
         }
     },
@@ -576,7 +576,7 @@ const featurelist = [
         "polarity": 0,
         "polarity-level": 0,
         "F1": {
-            'include': 31,
+            'consider': 31,
             'ignore': 65
         }
     },
@@ -598,7 +598,7 @@ const featurelist = [
         "polarity": 0.04,
         "polarity-level": 0,
         "F1": {
-            'include': 15,
+            'consider': 15,
             'ignore': 47
         }
     },
@@ -620,7 +620,7 @@ const featurelist = [
         "polarity": 0.020833333333333332,
         "polarity-level": 0,
         "F1": {
-            'include': 65,
+            'consider': 65,
             'ignore': 75
         }
     },
@@ -642,7 +642,7 @@ const featurelist = [
         "polarity": 0.0,
         "polarity-level": 0,
         "F1": {
-            'include': 15,
+            'consider': 15,
             'ignore': 21
         }
     },
@@ -664,7 +664,7 @@ const featurelist = [
         "polarity": 0.010135135135135136,
         "polarity-level": 0,
         "F1": {
-            'include': 49,
+            'consider': 49,
             'ignore': 44
         }
     },
@@ -686,7 +686,7 @@ const featurelist = [
         "polarity": 0.009615384615384616,
         "polarity-level": 0,
         "F1": {
-            'include': 47,
+            'consider': 47,
             'ignore': 46
         }
     },
@@ -708,7 +708,7 @@ const featurelist = [
         "polarity": 0,
         "polarity-level": 0,
         "F1": {
-            'include': 78,
+            'consider': 78,
             'ignore': 34
         }
     },
@@ -730,7 +730,7 @@ const featurelist = [
         "polarity": 0.045,
         "polarity-level": 0,
         "F1": {
-            'include': 89,
+            'consider': 89,
             'ignore': 58
         }
     },
@@ -752,7 +752,7 @@ const featurelist = [
         "polarity": 0.041666666666666664,
         "polarity-level": 0,
         "F1": {
-            'include': 85,
+            'consider': 85,
             'ignore': 13
         }
     },
@@ -774,7 +774,7 @@ const featurelist = [
         "polarity": 0.125,
         "polarity-level": 1,
         "F1": {
-            'include': 30,
+            'consider': 30,
             'ignore': 88
         }
     },
@@ -796,7 +796,7 @@ const featurelist = [
         "polarity": 0.125,
         "polarity-level": 1,
         "F1": {
-            'include': 26,
+            'consider': 26,
             'ignore': 60
         }
     },
@@ -818,7 +818,7 @@ const featurelist = [
         "polarity": 0.125,
         "polarity-level": 1,
         "F1": {
-            'include': 56,
+            'consider': 56,
             'ignore': 72
         }
     },
@@ -840,7 +840,7 @@ const featurelist = [
         "polarity": 0.06818181818181818,
         "polarity-level": 1,
         "F1": {
-            'include': 45,
+            'consider': 45,
             'ignore': 48
         }
     },
@@ -862,7 +862,7 @@ const featurelist = [
         "polarity": 0.14583333333333334,
         "polarity-level": 1,
         "F1": {
-            'include': 50,
+            'consider': 50,
             'ignore': 42
         }
     },
@@ -884,7 +884,7 @@ const featurelist = [
         "polarity": 0.125,
         "polarity-level": 1,
         "F1": {
-            'include': 67,
+            'consider': 67,
             'ignore': 22
         }
     },
@@ -906,7 +906,7 @@ const featurelist = [
         "polarity": 0.0546875,
         "polarity-level": 1,
         "F1": {
-            'include': 88,
+            'consider': 88,
             'ignore': 53
         }
     },
@@ -928,7 +928,7 @@ const featurelist = [
         "polarity": 0.0625,
         "polarity-level": 1,
         "F1": {
-            'include': 88,
+            'consider': 88,
             'ignore': 23
         }
     },
@@ -950,7 +950,7 @@ const featurelist = [
         "polarity": 0.2375,
         "polarity-level": 2,
         "F1": {
-            'include': 31,
+            'consider': 31,
             'ignore': 90
         }
     },
@@ -972,7 +972,7 @@ const featurelist = [
         "polarity": 0.29169999999999996,
         "polarity-level": 2,
         "F1": {
-            'include': 28,
+            'consider': 28,
             'ignore': 68
         }
     },
@@ -994,7 +994,7 @@ const featurelist = [
         "polarity": 0.375,
         "polarity-level": 2,
         "F1": {
-            'include': 57,
+            'consider': 57,
             'ignore': 84
         }
     },
@@ -1016,7 +1016,7 @@ const featurelist = [
         "polarity": 0.2375,
         "polarity-level": 2,
         "F1": {
-            'include': 14,
+            'consider': 14,
             'ignore': 29
         }
     },
@@ -1038,7 +1038,7 @@ const featurelist = [
         "polarity": 0.38952173913043475,
         "polarity-level": 2,
         "F1": {
-            'include': 21,
+            'consider': 21,
             'ignore': 35
         }
     },
@@ -1060,7 +1060,7 @@ const featurelist = [
         "polarity": 0.4938518518518518,
         "polarity-level": 2,
         "F1": {
-            'include': 36,
+            'consider': 36,
             'ignore': 27
         }
     },
@@ -1082,7 +1082,7 @@ const featurelist = [
         "polarity": 0.375,
         "polarity-level": 2,
         "F1": {
-            'include': 59,
+            'consider': 59,
             'ignore': 59
         }
     },
@@ -1104,7 +1104,7 @@ const featurelist = [
         "polarity": 0.20833333333333334,
         "polarity-level": 2,
         "F1": {
-            'include': 67,
+            'consider': 67,
             'ignore': 26
         }
     },
@@ -1126,7 +1126,7 @@ const featurelist = [
         "polarity": 0.3125,
         "polarity-level": 2,
         "F1": {
-            'include': 55,
+            'consider': 55,
             'ignore': 15
         }
     },
@@ -1148,7 +1148,7 @@ const featurelist = [
         "polarity": 0.34375,
         "polarity-level": 2,
         "F1": {
-            'include': 84,
+            'consider': 84,
             'ignore': 14
         }
     },
@@ -1170,7 +1170,7 @@ const featurelist = [
         "polarity": 0.515625,
         "polarity-level": 3,
         "F1": {
-            'include': 76,
+            'consider': 76,
             'ignore': 13
         }
     },
@@ -1192,7 +1192,7 @@ const featurelist = [
         "polarity": 0.75,
         "polarity-level": 3,
         "F1": {
-            'include': 25,
+            'consider': 25,
             'ignore': 60
         }
     },
@@ -1214,7 +1214,7 @@ const featurelist = [
         "polarity": 0.575,
         "polarity-level": 3,
         "F1": {
-            'include': 72,
+            'consider': 72,
             'ignore': 81
         }
     },
@@ -1236,7 +1236,7 @@ const featurelist = [
         "polarity": 0.5,
         "polarity-level": 3,
         "F1": {
-            'include': 73,
+            'consider': 73,
             'ignore': 61
         }
     },
@@ -1258,7 +1258,7 @@ const featurelist = [
         "polarity": 0.5,
         "polarity-level": 3,
         "F1": {
-            'include': 89,
+            'consider': 89,
             'ignore': 21
         }
     },
@@ -1280,7 +1280,7 @@ const featurelist = [
         "polarity": 0.5,
         "polarity-level": 3,
         "F1": {
-            'include': 29,
+            'consider': 29,
             'ignore': 89
         }
     }

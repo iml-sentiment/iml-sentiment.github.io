@@ -65,7 +65,7 @@ Object.defineProperties(selectView.prototype, {
         value: function(){
             var Obj = this;
             var ignore = this.rawData.ignore,
-                include = this.rawData.include;
+                consider = this.rawData.consider;
             var numScale = function(d){
                 return d;
             };
@@ -76,13 +76,13 @@ Object.defineProperties(selectView.prototype, {
             var color = d3.scale.category20c().range(),
                 colorScale = {low: color[1], high: color[5]}; // neg, pos
 
-            if (include < ignore)
+            if (consider < ignore)
                 this.scoreArr = [
                     {opt: 'ignore', optDisplay: 'Ignore',
                         score: numScale(this.rawData.ignore),
                         color: colorScale.high},
-                    {opt: 'include', optDisplay: 'Include',
-                        score: numScale(this.rawData.include),
+                    {opt: 'consider', optDisplay: 'Consider',
+                        score: numScale(this.rawData.consider),
                         color: colorScale.low}
                 ];
             else
@@ -90,8 +90,8 @@ Object.defineProperties(selectView.prototype, {
                     {opt: 'ignore', optDisplay: 'Ignore',
                         score: numScale(this.rawData.ignore),
                         color: colorScale.low},
-                    {opt: 'include', optDisplay: 'Include',
-                        score: numScale(this.rawData.include),
+                    {opt: 'consider', optDisplay: 'Consider',
+                        score: numScale(this.rawData.consider),
                         color: colorScale.high}
                 ];
 
@@ -147,7 +147,7 @@ Object.defineProperties(selectView.prototype, {
                         'width': bWidth,
                         'height': bHeight,
                         'x': function(d){
-                            if (d.opt == 'include') return Obj.width/2 - x0 - bWidth;
+                            if (d.opt == 'consider') return Obj.width/2 - x0 - bWidth;
                             else return Obj.width/2 + x0
                         },
                         'y': function(d,i){return scale.scoreScale(d.score) - bHeight/2},
@@ -162,7 +162,7 @@ Object.defineProperties(selectView.prototype, {
                         'stroke': function (d) {return d.color},
                         'stroke-width': 1,
                         'x1':  function(d){
-                            if (d.opt == 'include') return Obj.width/2 - x0;
+                            if (d.opt == 'consider') return Obj.width/2 - x0;
                             else return Obj.width/2 + x0
                         },
                         'x2': Obj.width/2,
@@ -177,7 +177,7 @@ Object.defineProperties(selectView.prototype, {
                     })
                     .attr({
                         'x': function(d){
-                            if (d.opt == 'include') return Obj.width/2 - x0 - bWidth/2;
+                            if (d.opt == 'consider') return Obj.width/2 - x0 - bWidth/2;
                             else return Obj.width/2 + x0 + bWidth/2
                         },
                         'y': function(d,i){return scale.scoreScale(d.score)},

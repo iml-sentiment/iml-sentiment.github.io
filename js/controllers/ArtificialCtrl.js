@@ -83,7 +83,7 @@ function ($scope, dataService, communService) {
             $scope.testedArr = [];
             $scope.tottestArr = clone($scope.featureEditlist);
         }
-        $scope.ifInclude = null;
+        $scope.ifConsider = null;
         $scope.feature = $scope.featureEditlist[0];
         if ($scope.iterNum >= 0)
             $scope.feature = $scope.featureEditlist[$scope.iterNum];
@@ -99,7 +99,7 @@ function ($scope, dataService, communService) {
     $scope.nextIter = function (opt) {
         $scope.running = true;
         $('.btn').attr('disabled', $scope.running);
-        $scope.ifInclude = opt;
+        $scope.ifConsider = opt;
         $scope.addLog();
         $scope.train();
         // modify the view to be back to default
@@ -125,14 +125,14 @@ function ($scope, dataService, communService) {
 
         newIter = {
             feature: feature.word,
-            ifInclude: $scope.ifInclude,
+            ifConsider: $scope.ifConsider,
             //displayF1_method: $scope.displayF1_method_true,
             F1: $scope.F1,
             timestamp: time,
             duration: (time-oldTime) / 1000
         };
         $scope.iterlog.push(newIter);
-        $scope.iterAction.push($scope.ifInclude);
+        $scope.iterAction.push($scope.ifConsider);
     }
 
     /*-- Savelog --*/
@@ -142,15 +142,15 @@ function ($scope, dataService, communService) {
 
     $scope.displayF1 = function () {
         $scope.F1 = $scope.feature.F1;
-        $scope.betterOpt = 'INCLUDING';
+        $scope.betterOpt = 'CONSIDERING';
         $scope.worseOpt = 'IGNORING';
         $scope.action = 'improve';
 
-        if ($scope.F1.ignore > $scope.F1.include){
+        if ($scope.F1.ignore > $scope.F1.consider){
             $scope.betterOpt = 'IGNORING';
-            $scope.worseOpt = 'INCLUDING';
+            $scope.worseOpt = 'CONSIDERING';
         }
-        if ($scope.F1.ignore == $scope.F1.include)
+        if ($scope.F1.ignore == $scope.F1.consider)
             $scope.action = 'not affect';
     };
 
