@@ -188,7 +188,7 @@ function ($scope, dataService, communService) {
               max = Math.floor(max);
               return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
             }
-            $scope.code = 'P' + timestamp.toString() + getRandomInt(1000, 9999).toString();
+            $scope.code = 'P' + timestamp.toString() + getRandomInt(100, 999).toString();
 
 
         }
