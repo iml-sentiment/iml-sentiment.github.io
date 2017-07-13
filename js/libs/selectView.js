@@ -66,7 +66,6 @@ Object.defineProperties(selectView.prototype, {
             var Obj = this;
             var ignore = this.rawData.ignore,
                 include = this.rawData.include;
-
             var numScale = function(d){
                 return d;
             };
@@ -80,20 +79,20 @@ Object.defineProperties(selectView.prototype, {
             if (include < ignore)
                 this.scoreArr = [
                     {opt: 'ignore', optDisplay: 'Ignore',
-                        score: numScale(this.rawData.include),
+                        score: numScale(this.rawData.ignore),
                         color: colorScale.high},
                     {opt: 'include', optDisplay: 'Include',
-                        score: numScale(this.rawData.ignore),
+                        score: numScale(this.rawData.include),
                         color: colorScale.low}
                 ];
             else
                 this.scoreArr = [
-                {opt: 'ignore', optDisplay: 'Include',
-                    score: numScale(this.rawData.include),
-                    color: colorScale.high},
-                {opt: 'include', optDisplay: 'Ignore',
-                    score: numScale(this.rawData.ignore),
-                    color: colorScale.low}
+                    {opt: 'ignore', optDisplay: 'Ignore',
+                        score: numScale(this.rawData.ignore),
+                        color: colorScale.low},
+                    {opt: 'include', optDisplay: 'Include',
+                        score: numScale(this.rawData.include),
+                        color: colorScale.high}
                 ];
 
             this.scale = {scoreScale: scoreScale, colorScale: colorScale};
