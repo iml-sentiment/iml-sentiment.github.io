@@ -31,6 +31,28 @@ const quizQuestions = [
 
 const featurelist = [
     {
+        "word": "impressive",
+        "F1": {
+            "del": {
+                "dev": 0.8251979886863609,
+                "train": 1.0,
+                "test": 0.7872034701871734
+            },
+            "keep": {
+                "dev": 0.8451753614079196,
+                "train": 1.0,
+                "test": 0.7925646241412484
+            }
+        },
+        "iter": 0,
+        "polarity": -0.609375,
+        "polarity-level": -3,
+        "F1": {
+            'include': 80,
+            'ignore': 43
+        }
+    },
+    {
         "word": "worst",
         "F1": {
             "del": {

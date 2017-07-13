@@ -1,4 +1,146 @@
 const examples = {
+    "impressive": [
+        {
+            "label": "0",
+            "index": 147,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "... actors aren't overly ",
+                    "post": ", noticeably the usually brilliant...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 254,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...is very moody and ",
+                    "post": ". Best of all though...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 87,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...makes a physically ",
+                    "post": " Tarzan. Maybe he got...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 291,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...first films in the ",
+                    "post": " career of Lloyd Kaufman...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 279,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...I thought was rather ",
+                    "post": ". I felt as if they did...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 612,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...and Fonda are equally as ",
+                    "post": " although Aiello is brilliant...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 668,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...some interesting and ",
+                    "post": " animatronic effects...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 321,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...which were quite ",
+                    "post": " for a low budget 50's....",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 509,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "...in this film is ",
+                    "post": ", he goes from being...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 792,
+            "displayArr": [
+                {
+                    "cur": "impressive",
+                    "pre": "The production is very ",
+                    "post": " and the setting is bleak...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        }
+    ],
     "absolutely": [
         {
             "label": "0",
