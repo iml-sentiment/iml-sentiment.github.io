@@ -20,7 +20,7 @@ function ($scope, dataService, communService) {
     $scope.stage = 'intro';
     $scope.running = false;
 
-    $scope.enableSubmitSecond = 1;
+    $scope.enableSubmitSecond = 0;
 
     // for recording score
     $scope.interview = {example: null, polarity: null, score: null, score_i: null};
