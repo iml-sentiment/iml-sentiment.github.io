@@ -191,7 +191,7 @@ function ($scope, dataService, communService) {
               return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
             }
             $scope.code = 'P' + timestamp.toString() + getRandomInt(100, 999).toString();
-            database.ref(timestamp).set({
+            database.ref($scope.code).set({
                 logData:$scope.iterlog,
                 interview: $scope.interview,
                 timestamp:timestamp,
