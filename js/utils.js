@@ -57,3 +57,12 @@ function shuffle(array) {
 
   return array;
 }
+
+function enableSubmit(id, time){
+    document.getElementById(id).disabled = true;
+    document.getElementById('hint').innerHTML = 'Please think through the task first!';
+    setTimeout(function(){
+        document.getElementById(id).disabled = false;
+        document.getElementById('hint').innerHTML = 'Please select one when you are ready!';
+    }, time * 1000);
+}

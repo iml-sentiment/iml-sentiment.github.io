@@ -1,9 +1,6 @@
 <h2>Post-task Questionnaire</h2>
 
-<p>Thank you for completing the tasks! In retrospect to your process, please answer the following question by selecting the
-appropriate radios. From left to right, each radio represents <span class="highlight">
-        strongly disagree, disagree, neutral, agree, and strongly agree.
-    </span></p>
+<p>Thank you for completing the tasks! Please answer the following questions:</p>
 
 <form id="interview_form" class="interview_form resize"  style="margin: auto; padding:auto">
     <p class="interview-header">I read the example reviews provided carefully.</p>
@@ -16,7 +13,7 @@ appropriate radios. From left to right, each radio represents <span class="highl
     <label class="form-check-label" for="example_5">Strongly agree</label>
     <hr/>
 
-    <p class="interview-header">The computer's estimated score is important for me.</p>
+    <p class="interview-header">The computer's estimated score was important for me.</p>
     <label for="example_1">Strongly disagree</label>
     <input type="radio" name="score_i" id="score_i_1" value="1" ng-model="interview.score_i" required="required">
     <input type="radio" name="score_i" id="score_i_2" value="2" ng-model="interview.score_i">
@@ -27,8 +24,7 @@ appropriate radios. From left to right, each radio represents <span class="highl
     <hr/>
 
 
-    <p class="interview-header">I think the computer's estimated score is
-        accurate.</p>
+    <p class="interview-header">I thought the computer's estimated score was accurate.</p>
     <label for="score_1">Strongly disagree</label>
     <input type="radio" name="score" id="score_1" value="1" ng-model="interview.score" required="required">
     <input type="radio" name="score" id="score_2" value="2" ng-model="interview.score">
@@ -38,8 +34,8 @@ appropriate radios. From left to right, each radio represents <span class="highl
     <label for="score_5">Strongly agree</label>
     <hr/>
 
-    <p class="interview-header">I mostly make the decisions based on my
-        prior understanding of the words' polarity.</p>
+    <p class="interview-header">I mostly made the decisions based on my prior understanding
+        of the words' polarity.</p>
     <label for="polarity_1">Strongly disagree</label>
     <input type="radio" name="polarity" id="polarity_1" value="1" ng-model="interview.polarity" required="required">
     <input type="radio" name="polarity" id="polarity_2" value="2" ng-model="interview.polarity" >

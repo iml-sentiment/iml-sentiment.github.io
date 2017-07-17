@@ -8670,7 +8670,7 @@ const examples = {
             "displayArr": [
                 {
                     "cur": "Unfortunately",
-                    "pre": "...And the priceless comeback: \"",
+                    "pre": "...priceless come back: \"",
                     "post": " it is sh_it, tough...",
                     "ifRank": true,
                     "df": -25,

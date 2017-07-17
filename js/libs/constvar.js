@@ -33,7 +33,7 @@ const featurelist = [
     /*
     {
         "word": "impressive",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8251979886863609,
                 "train": 1.0,
@@ -56,7 +56,7 @@ const featurelist = [
     */
     {
         "word": "worst",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8251979886863609,
                 "train": 1.0,
@@ -78,7 +78,7 @@ const featurelist = [
     },
     {
         "word": "wrong",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -100,7 +100,7 @@ const featurelist = [
     },
     {
         "word": "unfortunately",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -122,7 +122,7 @@ const featurelist = [
     },
     {
         "word": "bad",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8102673098181089,
                 "train": 1.0,
@@ -144,7 +144,7 @@ const featurelist = [
     },
     {
         "word": "never",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -166,7 +166,7 @@ const featurelist = [
     },
     {
         "word": "little",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -188,7 +188,7 @@ const featurelist = [
     },
     {
         "word": "must",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8501207729468598,
                 "train": 1.0,
@@ -210,7 +210,7 @@ const featurelist = [
     },
     {
         "word": "hard",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8351866750471402,
                 "train": 1.0,
@@ -232,7 +232,7 @@ const featurelist = [
     },
     {
         "word": "horror",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -254,7 +254,7 @@ const featurelist = [
     },
     {
         "word": "poor",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8452529436870779,
                 "train": 1.0,
@@ -276,7 +276,7 @@ const featurelist = [
     },
     {
         "word": "less",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -298,7 +298,7 @@ const featurelist = [
     },
     {
         "word": "stupid",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8252855815821849,
                 "train": 1.0,
@@ -320,7 +320,7 @@ const featurelist = [
     },
     {
         "word": "dead",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -342,7 +342,7 @@ const featurelist = [
     },
     {
         "word": "problem",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -364,7 +364,7 @@ const featurelist = [
     },
     {
         "word": "story",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -386,7 +386,7 @@ const featurelist = [
     },
     {
         "word": "scenes",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8203609022556391,
                 "train": 1.0,
@@ -408,7 +408,7 @@ const featurelist = [
     },
     {
         "word": "still",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -430,7 +430,7 @@ const featurelist = [
     },
     {
         "word": "even",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8552366247395244,
                 "train": 1.0,
@@ -452,7 +452,7 @@ const featurelist = [
     },
     {
         "word": "might",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -474,7 +474,7 @@ const featurelist = [
     },
     {
         "word": "away",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -496,7 +496,7 @@ const featurelist = [
     },
     {
         "word": "yet",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8351866750471402,
                 "train": 1.0,
@@ -518,7 +518,7 @@ const featurelist = [
     },
     {
         "word": "rather",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -540,7 +540,7 @@ const featurelist = [
     },
     {
         "word": "one",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8352692626346314,
                 "train": 1.0,
@@ -562,7 +562,7 @@ const featurelist = [
     },
     {
         "word": "would",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -584,7 +584,7 @@ const featurelist = [
     },
     {
         "word": "see",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8253550940654827,
                 "train": 1.0,
@@ -606,7 +606,7 @@ const featurelist = [
     },
     {
         "word": "first",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8352692626346314,
                 "train": 1.0,
@@ -628,7 +628,7 @@ const featurelist = [
     },
     {
         "word": "also",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -650,7 +650,7 @@ const featurelist = [
     },
     {
         "word": "get",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8351866750471402,
                 "train": 1.0,
@@ -672,7 +672,7 @@ const featurelist = [
     },
     {
         "word": "way",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -694,7 +694,7 @@ const featurelist = [
     },
     {
         "word": "could",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8303408521303258,
                 "train": 1.0,
@@ -716,7 +716,7 @@ const featurelist = [
     },
     {
         "word": "made",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8302391719425184,
                 "train": 1.0,
@@ -738,7 +738,7 @@ const featurelist = [
     },
     {
         "word": "seen",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -760,7 +760,7 @@ const featurelist = [
     },
     {
         "word": "pretty",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -782,7 +782,7 @@ const featurelist = [
     },
     {
         "word": "much",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8403208020050126,
                 "train": 1.0,
@@ -804,7 +804,7 @@ const featurelist = [
     },
     {
         "word": "think",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -826,7 +826,7 @@ const featurelist = [
     },
     {
         "word": "acting",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -848,7 +848,7 @@ const featurelist = [
     },
     {
         "word": "know",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -870,7 +870,7 @@ const featurelist = [
     },
     {
         "word": "actually",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -892,7 +892,7 @@ const featurelist = [
     },
     {
         "word": "show",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8501207729468598,
                 "train": 1.0,
@@ -914,7 +914,7 @@ const featurelist = [
     },
     {
         "word": "enough",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8401288244766505,
                 "train": 1.0,
@@ -936,7 +936,7 @@ const featurelist = [
     },
     {
         "word": "like",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8401288244766505,
                 "train": 1.0,
@@ -958,7 +958,7 @@ const featurelist = [
     },
     {
         "word": "well",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8301368760064411,
                 "train": 1.0,
@@ -980,7 +980,7 @@ const featurelist = [
     },
     {
         "word": "really",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1002,7 +1002,7 @@ const featurelist = [
     },
     {
         "word": "characters",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1024,7 +1024,7 @@ const featurelist = [
     },
     {
         "word": "best",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8351866750471402,
                 "train": 1.0,
@@ -1046,7 +1046,7 @@ const featurelist = [
     },
     {
         "word": "better",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8601127214170693,
                 "train": 1.0,
@@ -1068,7 +1068,7 @@ const featurelist = [
     },
     {
         "word": "love",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8203251706142112,
                 "train": 1.0,
@@ -1090,7 +1090,7 @@ const featurelist = [
     },
     {
         "word": "new",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1112,7 +1112,7 @@ const featurelist = [
     },
     {
         "word": "kind",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1134,7 +1134,7 @@ const featurelist = [
     },
     {
         "word": "interesting",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1156,7 +1156,7 @@ const featurelist = [
     },
     {
         "word": "good",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1177,8 +1177,30 @@ const featurelist = [
         }
     },
     {
-        "word": "beautiful",
+        "word": "impressive",
+        "F1_true": {
+            "del": {
+                "dev": 0.8251979886863609,
+                "train": 1.0,
+                "test": 0.7872034701871734
+            },
+            "keep": {
+                "dev": 0.8451753614079196,
+                "train": 1.0,
+                "test": 0.7925646241412484
+            }
+        },
+        "iter": 0,
+        "polarity": -0.609375,
+        "polarity-level": -3,
         "F1": {
+            'consider': 80,
+            'ignore': 43
+        }
+    },
+    {
+        "word": "beautiful",
+        "F1_true": {
             "del": {
                 "dev": 0.8402251030047231,
                 "train": 1.0,
@@ -1200,7 +1222,7 @@ const featurelist = [
     },
     {
         "word": "loved",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8502709755118425,
                 "train": 1.0,
@@ -1222,7 +1244,7 @@ const featurelist = [
     },
     {
         "word": "great",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8302391719425184,
                 "train": 1.0,
@@ -1244,7 +1266,7 @@ const featurelist = [
     },
     {
         "word": "obviously",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8451753614079196,
                 "train": 1.0,
@@ -1266,7 +1288,7 @@ const featurelist = [
     },
     {
         "word": "absolutely",
-        "F1": {
+        "F1_true": {
             "del": {
                 "dev": 0.8352692626346314,
                 "train": 1.0,

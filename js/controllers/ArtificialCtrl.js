@@ -20,6 +20,8 @@ function ($scope, dataService, communService) {
     $scope.stage = 'intro';
     $scope.running = false;
 
+    $scope.enableSubmitSecond = 1;
+
     // for recording score
     $scope.interview = {example: null, polarity: null, score: null, score_i: null};
 
@@ -52,7 +54,7 @@ function ($scope, dataService, communService) {
     $scope.iterlog = []; // log the information of each iteration
     $scope.iterAction = [];
     $scope.iterNum = -2; // get the iteration number. When editing 1st word: iter 0
-    $scope.totalIter = 50;
+    $scope.totalIter = 52;
     $scope.F1 = null;
 
     // when an algorithm option is selected from the bar
@@ -64,6 +66,8 @@ function ($scope, dataService, communService) {
         $scope.train();
         $scope.addLog(true);
         $scope.train();
+        enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
+        enableSubmit('IgnoreBtn', $scope.enableSubmitSecond);
     };
 
 
@@ -80,8 +84,8 @@ function ($scope, dataService, communService) {
             test:{}
         };
         if ($scope.featureEditlist == null){// input the data for once.
-            $scope.featureEditlist = shuffle(featurelist.slice(0, $scope.totalIter))
-                .concat(featurelist.slice($scope.totalIter));
+            $scope.featureEditlist = shuffle(featurelist.slice(0, $scope.totalIter-2))
+                .concat(featurelist.slice($scope.totalIter-2));
             $scope.examples = examples;
             $scope.testedArr = [];
             $scope.tottestArr = clone($scope.featureEditlist);
@@ -105,6 +109,10 @@ function ($scope, dataService, communService) {
         $scope.ifConsider = opt;
         $scope.addLog();
         $scope.train();
+
+        enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
+        enableSubmit('IgnoreBtn', $scope.enableSubmitSecond);
+
         // modify the view to be back to default
         if ($scope.iterNum > $scope.totalIter)
             return;
