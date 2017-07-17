@@ -184,12 +184,6 @@ function ($scope, dataService, communService) {
         else{
             timestamp = +new Date();
             //dataService.onSaveUser($scope.iterlog, $scope.interview, +new Date());
-            console.log($scope.iterlog);
-            database.ref(timestamp).set({
-                logData:$scope.iterlog,
-                interview: $scope.interview,
-                timestamp:timestamp
-            });
 
             function getRandomInt(min, max) {
               min = Math.ceil(min);
@@ -197,6 +191,14 @@ function ($scope, dataService, communService) {
               return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
             }
             $scope.code = 'P' + timestamp.toString() + getRandomInt(100, 999).toString();
+            database.ref(timestamp).set({
+                logData:$scope.iterlog,
+                interview: $scope.interview,
+                timestamp:timestamp,
+                code: $scope.code
+            });
+
+
 
 
         }
