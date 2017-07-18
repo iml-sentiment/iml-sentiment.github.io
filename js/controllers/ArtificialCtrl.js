@@ -20,7 +20,7 @@ function ($scope, dataService, communService) {
     $scope.stage = 'intro';
     $scope.running = false;
 
-    $scope.enableSubmitSecond = 0;
+    $scope.enableSubmitSecond = 2;
 
     // for recording score
     $scope.interview = {example: null, polarity: null, score: null, score_i: null};
@@ -54,7 +54,7 @@ function ($scope, dataService, communService) {
     $scope.iterlog = []; // log the information of each iteration
     $scope.iterAction = [];
     $scope.iterNum = -2; // get the iteration number. When editing 1st word: iter 0
-    $scope.totalIter = 52;
+    $scope.totalIter = 55;
     $scope.F1 = null;
 
     // when an algorithm option is selected from the bar
@@ -84,8 +84,8 @@ function ($scope, dataService, communService) {
             test:{}
         };
         if ($scope.featureEditlist == null){// input the data for once.
-            $scope.featureEditlist = shuffle(featurelist.slice(0, $scope.totalIter-2))
-                .concat(featurelist.slice($scope.totalIter-2));
+            $scope.featureEditlist = shuffle(featurelist.slice(0, $scope.totalIter-1))
+                .concat(featurelist.slice($scope.totalIter-1));
             $scope.examples = examples;
             $scope.testedArr = [];
             $scope.tottestArr = clone($scope.featureEditlist);
@@ -126,7 +126,7 @@ function ($scope, dataService, communService) {
         time = +new Date();
         feature = $scope.feature;
         if (ifInit == true) {
-            feature = {word: '[INIT]', polarity: 0, polarityLevel: 0};
+            feature = {word: '[INIT]', polarity: 0, polarityLevel: 0, F1Level: 0};
             oldTime = time;
         }
         else {
@@ -141,7 +141,8 @@ function ($scope, dataService, communService) {
             F1: $scope.F1,
             timestamp: time,
             polarity: $scope.feature.polarity,
-            polarityLevel: $scope.feature['polarity-level'],
+            polarityLevel: $scope.feature.polarityLevel,
+            F1Level: $scope.feature.F1Level,
             iterNum: $scope.iterNum,
             duration: (time-oldTime) / 1000
         };
