@@ -126,7 +126,7 @@ function ($scope, dataService, communService) {
         time = +new Date();
         feature = $scope.feature;
         if (ifInit == true) {
-            feature = {word: '[INIT]', score: 0, order: 0};
+            feature = {word: '[INIT]', polarity: 0, polarityLevel: 0};
             oldTime = time;
         }
         else {
@@ -140,6 +140,9 @@ function ($scope, dataService, communService) {
             //displayF1_method: $scope.displayF1_method_true,
             F1: $scope.F1,
             timestamp: time,
+            polarity: $scope.feature.polarity,
+            polarityLevel: $scope.feature['polarity-level'],
+            iterNum: $scope.iterNum,
             duration: (time-oldTime) / 1000
         };
         $scope.iterlog.push(newIter);
@@ -195,7 +198,8 @@ function ($scope, dataService, communService) {
                 logData:$scope.iterlog,
                 interview: $scope.interview,
                 timestamp:timestamp,
-                code: $scope.code
+                code: $scope.code,
+
             });
 
 
