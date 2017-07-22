@@ -1,23 +1,24 @@
 const quizQuestions = [
     {
-        id: 0,
-        text: 'Your feedback will be used to help teach the computer to judge movie sentiments on its own.',
-        cHint: 'Correct! The machine will learn from you to predict the sentiment of other reviews.',
-        iHint: 'The machine will learn from you to predict the sentiment of other reviews.',
-        img: false,
-        answer: 'true'
+        id: 1,
+        text: 'The score indicates that the computer estimates that ignoring "and" ' +
+        'makes it determine sentiments more effectively.',
+        cHint: 'Correct! The computer estimated score favors that "impressive" is relevant. ',
+        iHint: '"Relevant" receives higher score (80) in the panel, meaning that ' +
+        'the word "impressive" is relevant enough to make the computer more effective. ',
+        img: '../assets/img/quiz-impressive.png',
+        answer: 'false'
     },
     {
         id: 1,
         text: 'The score indicates that the computer estimates that ignoring "impressive" ' +
         'makes it determine sentiments more effectively.',
-        cHint: 'Correct! The computer estimated score favors considering "impressive". ',
-        iHint: '"Consider" receives higher score (80) in the panel, meaning that ' +
-        'considering the word "impressive" makes the computer more effective. ',
-        img: '../assets/img/quiz.png',
+        cHint: 'Correct! The computer estimated score favors that "impressive" is relevant. ',
+        iHint: '"Relevant" receives higher score (80) in the panel, meaning that ' +
+        'the word "impressive" is relevant enough to make the computer more effective. ',
+        img: '../assets/img/quiz-impressive.png',
         answer: 'false'
     },
-
     {
         id: 2,
         text: 'The computer\'s score is always correct.',

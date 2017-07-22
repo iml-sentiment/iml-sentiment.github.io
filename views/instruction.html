@@ -3,7 +3,7 @@
     Please carefully read the following instructions, using the arrows
     <span class="glyphicon glyphicon-chevron-left"></span> and
     <span class="glyphicon glyphicon-chevron-right"></span>
-    on the left/right to change pages. You will be able to start the task when you reach the sixth page.
+    on the left/right to change pages. You will be able to start the survey when you reach the sixth page.
 </p>
 
 <div id="carousel-example-generic" class="carousel" data-interval=false
@@ -23,10 +23,10 @@
       <div class="item active fix-height">
           <div class="resize">
               <div class="col-md-4">
-                  <p>In this HIT, you will help us collect a set of words useful for machines to predict the
+                  <p>In this survey, you will help us understand how people perceive the
                       <span class="highlight">sentiment (positive or negative) of movie reviews</span>.
-                      There are <span class="highlight">{{totalIter}}</span> tasks; each shows one word and asks you to
-                      judge whether it is relevant for determining the review’s sentiment.
+                      There are <span class="highlight">{{totalIter}}</span> questions; each shows one word and
+                      asks you to judge whether it is relevant for determining the review’s sentiment.
                   </p>
               </div>
                <div class="col-md-8">
@@ -37,14 +37,13 @@
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
-
                   <p>You will receive <span class="highlight">1.45 dollars</span> for your effort
                       <span class="highlight">if and only if</span> you finish all the
-                      <span>{{totalIter}}</span> tasks.
+                      <span>{{totalIter}}</span> questions.
                   </p>
 
-                  <p>Expect to spend around <span class="highlight">10-15</span> minutes to complete this task.
-                        Please do not accept the task if you cannot commit to this time duration.
+                  <p>Expect to spend around <span class="highlight">10-15</span> minutes to complete this survey.
+                        Please do not accept the survey if you cannot commit to this time duration.
                   </p>
               </div>
                <div class="col-md-8">
@@ -55,14 +54,15 @@
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
-                   <p>Take the task on <span class="highlight">"impressive"</span> for example,
-                       you will need to determine if the machine should
-                       <span class="highlight">"Consider"</span> this word or not
-                       <span class="highlight">("Ignore")</span> when trying to predict the sentiment
-                       of movie reviews.
+                   <p>Take the question about <span class="highlight">"impressive"</span>;
+                       you will need to determine if the word is
+                       <span class="highlight">"Relevant"</span> for predicting sentiment or if it isn’t
+                       helpful for deciding that the sentiment is positive or negative
+                       <span class="highlight">("Irrelevant")</span>.
                        For context, you are shown example review fragments containing the word
-                       (right side of the screen), but we want the machine to predict the sentiment of
-                       <i>other</i> reviews, including ones not yet written.
+                       (right side of the screen), but we want to understand the <i>general case</i>, for example,
+                       so we could use the words to train a machine to predict the sentiment of other
+                       reviews not yet written.
                     </p>
                   </div>
                    <div class="col-md-8">
@@ -72,10 +72,10 @@
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
-                  <p>As you tackle the task, the <span class="highlight">computer</span>
+                  <p>As you tackle the question, the <span class="highlight">computer</span>
                       will try to help by providing an <span class="highlight">estimated score</span>
-                      (between 0-100), that shows how effective <i>it</i> thinks
-                      considering / ignoring the word will be. This score <i>might</i> help you
+                      (between 0-100), that shows how relevant or irrelevant <i>it</i> thinks
+                      the word is. This score <i>might</i> help you
                       with your judgment (the higher the score, the better the computer thinks
                       it can make the call), but be aware that
                       <span class="highlight">the score may sometimes be wrong</span>.
@@ -88,12 +88,12 @@
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
-                  <p>We display the estimated scores right after the options you can take
-                      (Consider/Ignore), with the higher scored one highlighted with an
+                  <p>We display the estimated scores along with the options you can take
+                      (Relevant/Irrelevant), with the higher scored one highlighted with an
                       <span class="betterOpt">orange</span> background
-                      <span class="label betterlabel">Consider, 80</span>,
+                      <span class="label betterlabel">Relevant, 80</span>,
                       and the other one with <span class="worseOpt">blue</span>
-                      <span class="label worselabel">Ignore, 43</span>.
+                      <span class="label worselabel">Irrelevant, 43</span>.
                   </p>
               </div>
               <div class="col-md-8">
@@ -104,9 +104,9 @@
           <div class="resize">
               <div class="col-md-4">
                   <p>You should submit your decision with on one of the two submit buttons
-                      (labeled consider / ignore); this will take you to the next task.</p>
+                      (labeled relevant / irrelevant); this will take you to the next question.</p>
 
-                  <p>You can only submit after the task has been displayed for
+                  <p>You can only submit after the question has been displayed for
                       <span class="highlight">{{ enableSubmitSecond }} seconds</span>.</p>
 
                   </div>
