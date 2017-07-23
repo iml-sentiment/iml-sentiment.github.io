@@ -78,7 +78,7 @@ Object.defineProperties(selectView.prototype, {
 
             if (relevant < irrelevant)
                 this.scoreArr = [
-                    {opt: 'irrelevant', optDisplay: 'Irrelevant',
+                    {opt: 'irrelevant', optDisplay: 'Not Relevant',
                         score: numScale(this.rawData.irrelevant),
                         color: colorScale.high},
                     {opt: 'relevant', optDisplay: 'Relevant',
@@ -87,7 +87,7 @@ Object.defineProperties(selectView.prototype, {
                 ];
             else
                 this.scoreArr = [
-                    {opt: 'irrelevant', optDisplay: 'Irrelevant',
+                    {opt: 'irrelevant', optDisplay: 'Not Relevant',
                         score: numScale(this.rawData.irrelevant),
                         color: colorScale.low},
                     {opt: 'relevant', optDisplay: 'Relevant',

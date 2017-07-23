@@ -26,11 +26,61 @@ const quizQuestions = [
         iHint: 'Be careful! the computer can be wrong. ',
         img: false,
         answer: 'false'
-    },
+    }
 
 ]
 
 const featurelist = [
+    {
+        "polarity": -0.609375,
+        "F1": {
+            "relevant": 54,
+            "irrelevant": 60
+        },
+        "word": "and",
+        "iter": 0,
+        "F1Level": -3,
+        "F1_true": {
+            "keep": {
+                "train": 1.0,
+                "test": 0.7925646241412484,
+                "dev": 0.8451753614079196
+            },
+            "del": {
+                "train": 1.0,
+                "test": 0.7872034701871734,
+                "dev": 0.8251979886863609
+            }
+        },
+        "polarityLevel": -3
+    },
+    {
+        "polarity": 0.609375,
+        "F1": {
+            "relevant": 80,
+            "irrelevant": 43
+        },
+        "word": "impressive",
+        "iter": 0,
+        "F1Level": 2,
+        "F1_true": {
+            "keep": {
+                "train": 1.0,
+                "test": 0.7925646241412484,
+                "dev": 0.8451753614079196
+            },
+            "del": {
+                "train": 1.0,
+                "test": 0.7872034701871734,
+                "dev": 0.8251979886863609
+            }
+        },
+        "polarityLevel": 3
+    }
+]
+
+const featurelist_real = [
+
     {
         "polarity": -0.609375,
         "F1": {

@@ -66,7 +66,7 @@ function ($scope, dataService, communService) {
         $scope.train();
         $scope.addLog(true);
         $scope.train();
-        enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
+        enableSubmit('RelevantBtn', $scope.enableSubmitSecond);
         enableSubmit('IrrelevantBtn', $scope.enableSubmitSecond);
     };
 
@@ -110,7 +110,7 @@ function ($scope, dataService, communService) {
         $scope.addLog();
         $scope.train();
 
-        enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
+        enableSubmit('RelevantBtn', $scope.enableSubmitSecond);
         enableSubmit('IrrelevantBtn', $scope.enableSubmitSecond);
 
         // modify the view to be back to default
@@ -160,7 +160,7 @@ function ($scope, dataService, communService) {
         $scope.suggest = 'RELEVANT';
 
         if ($scope.F1.irrelevant > $scope.F1.relevant){
-            $scope.suggest = 'IRRELEVANT';
+            $scope.suggest = 'NOT RELEVANT';
         }
     };
 

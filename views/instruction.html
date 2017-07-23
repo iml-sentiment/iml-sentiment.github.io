@@ -3,7 +3,7 @@
     Please carefully read the following instructions, using the arrows
     <span class="glyphicon glyphicon-chevron-left"></span> and
     <span class="glyphicon glyphicon-chevron-right"></span>
-    on the left/right to change pages. You will be able to start the survey when you reach the sixth page.
+    on the left/right to change pages. You will be able to start the survey when you reach the seventh page.
 </p>
 
 <div id="carousel-example-generic" class="carousel" data-interval=false
@@ -16,6 +16,7 @@
         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="6"></li>
     </ol>
 
   <!-- Wrapper for slides -->
@@ -58,8 +59,19 @@
                        you will need to determine if the word is
                        <span class="highlight">"Relevant"</span> for predicting sentiment or if it isn’t
                        helpful for deciding that the sentiment is positive or negative
-                       <span class="highlight">("Irrelevant")</span>.
-                       For context, you are shown example review fragments containing the word
+                       <span class="highlight">("Not Relevant")</span>.
+                    </p>
+                  </div>
+                   <div class="col-md-8">
+                       <img class="resize-img" src="../assets/img/task.png" alt="..."></div>
+          </div>
+      </div>
+
+
+      <div class="item fix-height">
+          <div class="resize">
+              <div class="col-md-4">
+                   <p>For context, you are shown example review fragments containing the word
                        (right side of the screen), but we want to understand the <i>general case</i>, for example,
                        so we could use the words to train a machine to predict the sentiment of other
                        reviews not yet written.
@@ -69,12 +81,16 @@
                        <img class="resize-img" src="../assets/img/example.png" alt="..."></div>
           </div>
       </div>
+
+
+
+
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
                   <p>As you tackle the question, the <span class="highlight">computer</span>
                       will try to help by providing an <span class="highlight">estimated score</span>
-                      (between 0-100), that shows how relevant or irrelevant <i>it</i> thinks
+                      (between 0-100), that shows how relevant or not <i>it</i> thinks
                       the word is. This score <i>might</i> help you
                       with your judgment (the higher the score, the better the computer thinks
                       it can make the call), but be aware that
@@ -89,11 +105,11 @@
           <div class="resize">
               <div class="col-md-4">
                   <p>We display the estimated scores along with the options you can take
-                      (Relevant/Irrelevant), with the higher scored one highlighted with an
+                      (Relevant/Not Relevant), with the higher scored one highlighted with an
                       <span class="betterOpt">orange</span> background
                       <span class="label betterlabel">Relevant, 80</span>,
                       and the other one with <span class="worseOpt">blue</span>
-                      <span class="label worselabel">Irrelevant, 43</span>.
+                      <span class="label worselabel">Not Relevant, 43</span>.
                   </p>
               </div>
               <div class="col-md-8">
@@ -104,18 +120,16 @@
           <div class="resize">
               <div class="col-md-4">
                   <p>You should submit your decision with on one of the two submit buttons
-                      (labeled relevant / irrelevant); this will take you to the next question.</p>
+                      (labeled relevant / not relevant); this will take you to the next question.</p>
 
                   <p>You can only submit after the question has been displayed for
                       <span class="highlight">{{ enableSubmitSecond }} seconds</span>.</p>
-
+                    <button class="btn btn-success"
+                          ng-click=currentStage('quiz') role="button">I understand!!</button>
                   </div>
                    <div class="col-md-8">
                        <img class="resize-img" src="../assets/img/submit.png" alt="..."></div>
-              <div class="row">
-                  <button class="btn btn-success"
-                          ng-click=currentStage('quiz') role="button">I understand!!</button>
-              </div>
+              <br/>
           </div>
       </div>
   </div>

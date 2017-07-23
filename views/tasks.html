@@ -4,7 +4,7 @@
     <!-- Task question -->
     <p class="taskQuestion">
             When determining if movie reviews are positive or negative,
-            Is the word "<span class="feature">{{ feature.word }}</span>" relevant or irrelevant?</p>
+            Is the word "<span class="feature">{{ feature.word }}</span>" Relevant or Not Relevant?</p>
     <div class="col-md-5">
 
         <!-- Performance score-->
@@ -13,9 +13,8 @@
         <p class="improveNotice" ng-show="F1.relevant == F1.irrelevant">"
             The machine cannot predict if "{{ feature.word }}" is relevant or irrelevant.
         </p><!-- end summary -->
-        <p class="improveNotice" ng-show="F1.relevant != F1.irrelevant">"
-            {{ feature.word }}" is predicted to be
-            <span class = 'betterOpt'>{{ select }}</span>.
+        <p class="improveNotice" ng-show="F1.relevant != F1.irrelevant">The machine
+            predicts "{{ feature.word }}" to be <span class = 'betterOpt'>{{ suggest }}</span>.
         </p><!-- end summary -->
     </div><!--End of question -->
     <!--Exmaple-->
@@ -41,11 +40,11 @@
 <div class="row">
     <div class="col-md-6">
         <button ng-model="ifRelevant" value="relevant"
-                ng-click="nextIter('relevant')" class="btn btn-primary RelevantBtn iterBtn"
+                ng-click="nextIter('relevant')" class="btn btn-primary RelevantBtn iterBtn RelevantBtn"
                 id = "RelevantBtn" role="button">Relevant</button></div>
     <div class="col-md-6">
         <button ng-model="ifRelevant" value="irrelevant"
-                ng-click="nextIter('irrelevant')" class="btn btn-primary IrrelevantBtn iterBtn"
-                id = "IrrelevantBtn" role="button">Irrelevant</button></div>
+                ng-click="nextIter('irrelevant')" class="btn btn-primary IrrelevantBtn iterBtn IrrelevantBtn"
+                id = "IrrelevantBtn" role="button">Not Relevant</button></div>
 </div><!-- end submit buttons -->
 <hr/>

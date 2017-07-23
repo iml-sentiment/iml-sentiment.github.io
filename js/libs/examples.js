@@ -1,4 +1,149 @@
 const examples = {
+    /* sample */
+    "and": [
+        {
+            "label": "0",
+            "index": 147,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "... goes to great effort ",
+                    "post": " lengths to faithfully recreate...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "and"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 254,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...some of its offensive ",
+                    "post": " gratuitous but this...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 87,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...wetbacks, towelheads, ",
+                    "post": " Godless Eastern European...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 291,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...is not interesting ",
+                    "post": " should not have been made...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "0",
+            "index": 279,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...This is my second (",
+                    "post": " I assure you it will be...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 612,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...woke up one day ",
+                    "post": " thought I will make a film...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 668,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...philosophical ",
+                    "post": " blackly humorous...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 321,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...would have done it, ",
+                    "post": " even if they had....",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 509,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...story is revealed slowly ",
+                    "post": " realistically...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        },
+        {
+            "label": "1",
+            "index": 792,
+            "displayArr": [
+                {
+                    "cur": "and",
+                    "pre": "...it's painful to watch ",
+                    "post": " you wonder whether...",
+                    "ifRank": true,
+                    "df": 8,
+                    "feature": "absolutely"
+                }
+            ]
+        }
+    ],
+
+    /* sample */
     "impressive": [
         {
             "label": "0",
