@@ -1,6 +1,6 @@
 const quizQuestions = [
     {
-        id: 1,
+        id: 0,
         text: 'The score indicates that the computer estimates that "impressive" ' +
         'is relevant to the sentiment of movie reviews.',
         cHint: 'Correct! The computer estimated score favors that "impressive" is relevant. ',
@@ -13,9 +13,9 @@ const quizQuestions = [
         id: 1,
         text: 'The score indicates that the computer estimates that "and" ' +
         'is relevant to the sentiment of movie reviews.',
-        cHint: '"Not relevant" receives higher score (60) in the panel, meaning that ' +
-        'the word "and" is relevant according to the computer. Note that the difference is marginal.',
-        iHint: 'Correct! The computer estimated score favors that "and" is not relevant. ' +
+        iHint: '"Not relevant" receives higher score (60) in the panel, meaning that ' +
+        'the word "and" is not relevant according to the computer. Note that the difference is marginal.',
+        cHint: 'Correct! The computer estimated score favors that "and" is not relevant. ' +
         'Note that the difference is marginal.',
         img: '../assets/img/quiz-and.png',
         answer: 'false'
