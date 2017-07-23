@@ -1,22 +1,23 @@
 const quizQuestions = [
     {
         id: 1,
-        text: 'The score indicates that the computer estimates that ignoring "and" ' +
-        'makes it determine sentiments more effectively.',
+        text: 'The score indicates that the computer estimates that "impressive" ' +
+        'is relevant to the sentiment of movie reviews.',
         cHint: 'Correct! The computer estimated score favors that "impressive" is relevant. ',
         iHint: '"Relevant" receives higher score (80) in the panel, meaning that ' +
         'the word "impressive" is relevant enough to make the computer more effective. ',
         img: '../assets/img/quiz-impressive.png',
-        answer: 'false'
+        answer: 'true'
     },
     {
         id: 1,
-        text: 'The score indicates that the computer estimates that ignoring "impressive" ' +
-        'makes it determine sentiments more effectively.',
-        cHint: 'Correct! The computer estimated score favors that "impressive" is relevant. ',
-        iHint: '"Relevant" receives higher score (80) in the panel, meaning that ' +
-        'the word "impressive" is relevant enough to make the computer more effective. ',
-        img: '../assets/img/quiz-impressive.png',
+        text: 'The score indicates that the computer estimates that "and" ' +
+        'is relevant to the sentiment of movie reviews.',
+        cHint: '"Not relevant" receives higher score (60) in the panel, meaning that ' +
+        'the word "and" is relevant according to the computer. Note that the difference is marginal.',
+        iHint: 'Correct! The computer estimated score favors that "and" is not relevant. ' +
+        'Note that the difference is marginal.',
+        img: '../assets/img/quiz-and.png',
         answer: 'false'
     },
     {
