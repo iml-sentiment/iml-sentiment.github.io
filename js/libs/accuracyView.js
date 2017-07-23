@@ -139,7 +139,7 @@ Object.defineProperties(AccuracyView.prototype, {
                 .interpolate(INTERPOLATE)
                 .x(function(d, i) {return scale.xScale(Obj.nTime[i]); })
                 .y(function(d, i) {
-                    if (Obj.ifIncludeArr[i] == 'ignore')return scale.yScale(d.del);
+                    if (Obj.ifIncludeArr[i] == 'irrelevant')return scale.yScale(d.del);
                     else return scale.yScale(d.keep);
                 });
 
@@ -185,7 +185,7 @@ Object.defineProperties(AccuracyView.prototype, {
                     .attr({
                         'stroke': function(d,i){
                             displaySet = Obj.rawData[i].F1.dev.display;
-                            if ((displaySet.keep > displaySet.del && Obj.rawData[i].ifInclude == 'ignore')
+                            if ((displaySet.keep > displaySet.del && Obj.rawData[i].ifInclude == 'irrelevant')
                             || (displaySet.keep < displaySet.del && Obj.rawData[i].ifInclude == 'include'))
                                 return 'red';
                             return 'white'

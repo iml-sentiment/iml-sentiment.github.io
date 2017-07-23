@@ -64,8 +64,8 @@ Object.defineProperties(selectView.prototype, {
         * */
         value: function(){
             var Obj = this;
-            var ignore = this.rawData.ignore,
-                consider = this.rawData.consider;
+            var irrelevant = this.rawData.irrelevant,
+                relevant = this.rawData.relevant;
             var numScale = function(d){
                 return d;
             };
@@ -76,22 +76,22 @@ Object.defineProperties(selectView.prototype, {
             var color = d3.scale.category20c().range(),
                 colorScale = {low: color[1], high: color[5]}; // neg, pos
 
-            if (consider < ignore)
+            if (relevant < irrelevant)
                 this.scoreArr = [
-                    {opt: 'ignore', optDisplay: 'Ignore',
-                        score: numScale(this.rawData.ignore),
+                    {opt: 'irrelevant', optDisplay: 'Irrelevant',
+                        score: numScale(this.rawData.irrelevant),
                         color: colorScale.high},
-                    {opt: 'consider', optDisplay: 'Consider',
-                        score: numScale(this.rawData.consider),
+                    {opt: 'relevant', optDisplay: 'Relevant',
+                        score: numScale(this.rawData.relevant),
                         color: colorScale.low}
                 ];
             else
                 this.scoreArr = [
-                    {opt: 'ignore', optDisplay: 'Ignore',
-                        score: numScale(this.rawData.ignore),
+                    {opt: 'irrelevant', optDisplay: 'Irrelevant',
+                        score: numScale(this.rawData.irrelevant),
                         color: colorScale.low},
-                    {opt: 'consider', optDisplay: 'Consider',
-                        score: numScale(this.rawData.consider),
+                    {opt: 'relevant', optDisplay: 'Relevant',
+                        score: numScale(this.rawData.relevant),
                         color: colorScale.high}
                 ];
 
@@ -147,7 +147,7 @@ Object.defineProperties(selectView.prototype, {
                         'width': bWidth,
                         'height': bHeight,
                         'x': function(d){
-                            if (d.opt == 'consider') return Obj.width/2 - x0 - bWidth;
+                            if (d.opt == 'relevant') return Obj.width/2 - x0 - bWidth;
                             else return Obj.width/2 + x0
                         },
                         'y': function(d,i){return scale.scoreScale(d.score) - bHeight/2},
@@ -162,7 +162,7 @@ Object.defineProperties(selectView.prototype, {
                         'stroke': function (d) {return d.color},
                         'stroke-width': 1,
                         'x1':  function(d){
-                            if (d.opt == 'consider') return Obj.width/2 - x0;
+                            if (d.opt == 'relevant') return Obj.width/2 - x0;
                             else return Obj.width/2 + x0
                         },
                         'x2': Obj.width/2,
@@ -177,7 +177,7 @@ Object.defineProperties(selectView.prototype, {
                     })
                     .attr({
                         'x': function(d){
-                            if (d.opt == 'consider') return Obj.width/2 - x0 - bWidth/2;
+                            if (d.opt == 'relevant') return Obj.width/2 - x0 - bWidth/2;
                             else return Obj.width/2 + x0 + bWidth/2
                         },
                         'y': function(d,i){return scale.scoreScale(d.score)},

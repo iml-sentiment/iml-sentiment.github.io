@@ -4,15 +4,19 @@
     <!-- Task question -->
     <p class="taskQuestion">
             When determining if movie reviews are positive or negative,
-            Should the word "<span class="feature">{{ feature.word }}</span>" be considered or ignored?</p>
+            Is the word "<span class="feature">{{ feature.word }}</span>" relevant or irrelevant?</p>
     <div class="col-md-5">
 
         <!-- Performance score-->
         <div class = col-md-12 ng-include src="'../views/select.html'"></div>
         <!-- One sentence summary of the improvement -->
-        <p class="improveNotice"><span class = 'betterOpt'>{{ betterOpt }}</span>
-            "{{ feature.word }}" is predicted to {{ action }} the performance compared to
-            <span class = 'worseOpt'>{{ worseOpt }}</span> it.</p><!-- end summary -->
+        <p class="improveNotice" ng-show="F1.relevant == F1.irrelevant">"
+            The machine cannot predict if "{{ feature.word }}" is relevant or irrelevant.
+        </p><!-- end summary -->
+        <p class="improveNotice" ng-show="F1.relevant != F1.irrelevant">"
+            {{ feature.word }}" is predicted to be
+            <span class = 'betterOpt'>{{ select }}</span>.
+        </p><!-- end summary -->
     </div><!--End of question -->
     <!--Exmaple-->
     <div class="col-md-7">
@@ -36,12 +40,12 @@
 
 <div class="row">
     <div class="col-md-6">
-        <button ng-model="ifConsider" value="consider"
-                ng-click="nextIter('consider')" class="btn btn-primary IncludeBtn iterBtn"
-                id = "IncludeBtn" role="button">Consider</button></div>
+        <button ng-model="ifRelevant" value="relevant"
+                ng-click="nextIter('relevant')" class="btn btn-primary RelevantBtn iterBtn"
+                id = "RelevantBtn" role="button">Relevant</button></div>
     <div class="col-md-6">
-        <button ng-model="ifConsider" value="ignore"
-                ng-click="nextIter('ignore')" class="btn btn-primary IgnoreBtn iterBtn"
-                id = "IgnoreBtn" role="button">Ignore</button></div>
+        <button ng-model="ifRelevant" value="irrelevant"
+                ng-click="nextIter('irrelevant')" class="btn btn-primary IrrelevantBtn iterBtn"
+                id = "IrrelevantBtn" role="button">Irrelevant</button></div>
 </div><!-- end submit buttons -->
 <hr/>

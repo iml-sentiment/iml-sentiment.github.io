@@ -67,7 +67,7 @@ function ($scope, dataService, communService) {
         $scope.addLog(true);
         $scope.train();
         enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
-        enableSubmit('IgnoreBtn', $scope.enableSubmitSecond);
+        enableSubmit('IrrelevantBtn', $scope.enableSubmitSecond);
     };
 
 
@@ -90,7 +90,7 @@ function ($scope, dataService, communService) {
             $scope.testedArr = [];
             $scope.tottestArr = clone($scope.featureEditlist);
         }
-        $scope.ifConsider = null;
+        $scope.ifRelevant = null;
         $scope.feature = $scope.featureEditlist[0];
         if ($scope.iterNum >= 0)
             $scope.feature = $scope.featureEditlist[$scope.iterNum];
@@ -106,12 +106,12 @@ function ($scope, dataService, communService) {
     $scope.nextIter = function (opt) {
         $scope.running = true;
         $('.btn').attr('disabled', $scope.running);
-        $scope.ifConsider = opt;
+        $scope.ifRelevant = opt;
         $scope.addLog();
         $scope.train();
 
         enableSubmit('IncludeBtn', $scope.enableSubmitSecond);
-        enableSubmit('IgnoreBtn', $scope.enableSubmitSecond);
+        enableSubmit('IrrelevantBtn', $scope.enableSubmitSecond);
 
         // modify the view to be back to default
         if ($scope.iterNum > $scope.totalIter)
@@ -136,7 +136,7 @@ function ($scope, dataService, communService) {
 
         newIter = {
             feature: feature.word,
-            ifConsider: $scope.ifConsider,
+            ifRelevant: $scope.ifRelevant,
             //displayF1_method: $scope.displayF1_method_true,
             F1: $scope.F1,
             timestamp: time,
@@ -147,7 +147,7 @@ function ($scope, dataService, communService) {
             duration: (time-oldTime) / 1000
         };
         $scope.iterlog.push(newIter);
-        $scope.iterAction.push($scope.ifConsider);
+        $scope.iterAction.push($scope.ifRelevant);
     }
 
     /*-- Savelog --*/
@@ -157,16 +157,11 @@ function ($scope, dataService, communService) {
 
     $scope.displayF1 = function () {
         $scope.F1 = $scope.feature.F1;
-        $scope.betterOpt = 'CONSIDERING';
-        $scope.worseOpt = 'IGNORING';
-        $scope.action = 'improve';
+        $scope.suggest = 'RELEVANT';
 
-        if ($scope.F1.ignore > $scope.F1.consider){
-            $scope.betterOpt = 'IGNORING';
-            $scope.worseOpt = 'CONSIDERING';
+        if ($scope.F1.irrelevant > $scope.F1.relevant){
+            $scope.suggest = 'IRRELEVANT';
         }
-        if ($scope.F1.ignore == $scope.F1.consider)
-            $scope.action = 'not affect';
     };
 
 
