@@ -31,7 +31,7 @@ const quizQuestions = [
 
 ]
 
-const featurelist = [
+const featurelist_sample = [
     {
         "polarity": -0.609375,
         "F1": {
@@ -80,7 +80,7 @@ const featurelist = [
     }
 ]
 
-const featurelist_real = [
+const featurelist = [
 
     {
         "polarity": -0.609375,
