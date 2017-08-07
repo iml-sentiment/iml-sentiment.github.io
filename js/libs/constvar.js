@@ -27,8 +27,16 @@ const quizQuestions = [
         iHint: 'Be careful! the computer can be wrong. ',
         img: false,
         answer: 'false'
+    },
+    {
+        id: 2,
+        text: 'We will record the time you spend on each question.',
+        cHint: 'Correct! Please try to think carefully, and complete the survey continuously. ',
+        iHint: 'Your completion duration is important to us. ' +
+        'Please try to think carefully, and complete the survey continuously. ',
+        img: false,
+        answer: 'true'
     }
-
 ]
 
 const featurelist_sample = [
@@ -80,1317 +88,592 @@ const featurelist_sample = [
     }
 ]
 
-const featurelist = [
-
+const featurelist =[
+    /* ----------------------------------------------------------- */
     {
-        "polarity": -0.609375,
-        "F1": {
-            "relevant": 29,
-            "irrelevant": 89
-        },
-        "word": "worst",
-        "iter": 0,
+        "polarity": -0.75,
+        "word": "horribly",
         "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7872034701871734,
-                "dev": 0.8251979886863609
-            }
-        },
-        "polarityLevel": -3
-    },
-    {
-        "polarity": -0.5178571428571429,
+        "polarityLevel": -3,
         "F1": {
-            "relevant": 19,
-            "irrelevant": 24
-        },
-        "word": "wrong",
-        "iter": 1,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7926445705977764,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -3
+            "relevant": 10,
+            "irrelevant": 83
+        }
     },
     {
         "polarity": -0.875,
-        "F1": {
-            "relevant": 82,
-            "irrelevant": 47
-        },
-        "word": "unfortunately",
-        "iter": 2,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7914442967073422,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": -3
-    },
-    {
-        "polarity": -0.475,
-        "F1": {
-            "relevant": 26,
-            "irrelevant": 83
-        },
         "word": "bad",
-        "iter": 3,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7864833821703286,
-                "dev": 0.8102673098181089
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.375,
-        "F1": {
-            "relevant": 12,
-            "irrelevant": 96
-        },
-        "word": "never",
-        "iter": 4,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7924831875189505,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.4,
-        "F1": {
-            "relevant": 10,
-            "irrelevant": 42
-        },
-        "word": "little",
-        "iter": 5,
         "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.792564401089882,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.16666666666666666,
-        "F1": {
-            "relevant": 29,
-            "irrelevant": 74
-        },
-        "word": "must",
-        "iter": 6,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7912844282466264,
-                "dev": 0.8501207729468598
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.203125,
-        "F1": {
-            "relevant": 82,
-            "irrelevant": 89
-        },
-        "word": "hard",
-        "iter": 7,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7929646642549121,
-                "dev": 0.8351866750471402
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.2916666666666667,
-        "F1": {
-            "relevant": 41,
-            "irrelevant": 62
-        },
-        "word": "horror",
-        "iter": 8,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7928042010562852,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.15625,
-        "F1": {
-            "relevant": 23,
-            "irrelevant": 17
-        },
-        "word": "poor",
-        "iter": 9,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7899237915456794,
-                "dev": 0.8452529436870779
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.15625,
-        "F1": {
-            "relevant": 13,
-            "irrelevant": 10
-        },
-        "word": "less",
-        "iter": 10,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7921646822775353,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.4166666666666667,
-        "F1": {
-            "relevant": 76,
-            "irrelevant": 33
-        },
-        "word": "stupid",
-        "iter": 11,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7898426833290796,
-                "dev": 0.8252855815821849
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.22916666666666666,
-        "F1": {
-            "relevant": 77,
-            "irrelevant": 43
-        },
-        "word": "dead",
-        "iter": 12,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7928846170079799,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.2916666666666667,
-        "F1": {
-            "relevant": 83,
-            "irrelevant": 12
-        },
-        "word": "problem",
-        "iter": 13,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.79280433366949,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -2
-    },
-    {
-        "polarity": -0.0625,
-        "F1": {
-            "relevant": 15,
-            "irrelevant": 73
-        },
-        "word": "story",
-        "iter": 14,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7916049656711406,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.0625,
-        "F1": {
-            "relevant": 12,
-            "irrelevant": 89
-        },
-        "word": "scenes",
-        "iter": 15,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7928841291766928,
-                "dev": 0.8203609022556391
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.13392857142857142,
-        "F1": {
-            "relevant": 57,
-            "irrelevant": 88
-        },
-        "word": "still",
-        "iter": 16,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7919242868184873,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.0625,
-        "F1": {
-            "relevant": 45,
-            "irrelevant": 63
-        },
-        "word": "even",
-        "iter": 17,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7932019098414257,
-                "dev": 0.8552366247395244
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.125,
-        "F1": {
-            "relevant": 49,
-            "irrelevant": 45
-        },
-        "word": "might",
-        "iter": 18,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7928040578348216,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.052083333333333336,
-        "F1": {
-            "relevant": 88,
-            "irrelevant": 47
-        },
-        "word": "away",
-        "iter": 19,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7923245776511679,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.10416666666666667,
-        "F1": {
-            "relevant": 79,
-            "irrelevant": 10
-        },
-        "word": "yet",
-        "iter": 20,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7940849342580623,
-                "dev": 0.8351866750471402
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": -0.125,
-        "F1": {
-            "relevant": 77,
-            "irrelevant": 13
-        },
-        "word": "rather",
-        "iter": 21,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7931248989967841,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": -1
-    },
-    {
-        "polarity": 0.0,
-        "F1": {
-            "relevant": 14,
-            "irrelevant": 67
-        },
-        "word": "one",
-        "iter": 22,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7935244970175968,
-                "dev": 0.8352692626346314
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0,
-        "F1": {
-            "relevant": 31,
-            "irrelevant": 65
-        },
-        "word": "would",
-        "iter": 23,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7920838363970993,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.04,
-        "F1": {
-            "relevant": 15,
-            "irrelevant": 47
-        },
-        "word": "see",
-        "iter": 24,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7936834582694469,
-                "dev": 0.8253550940654827
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.020833333333333332,
-        "F1": {
-            "relevant": 65,
-            "irrelevant": 75
-        },
-        "word": "first",
-        "iter": 25,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7925648047102309,
-                "dev": 0.8352692626346314
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.0,
-        "F1": {
-            "relevant": 15,
-            "irrelevant": 21
-        },
-        "word": "also",
-        "iter": 26,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7927249389842325,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.010135135135135136,
-        "F1": {
-            "relevant": 49,
-            "irrelevant": 44
-        },
-        "word": "get",
-        "iter": 27,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7919248941168049,
-                "dev": 0.8351866750471402
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.009615384615384616,
-        "F1": {
-            "relevant": 47,
-            "irrelevant": 46
-        },
-        "word": "way",
-        "iter": 28,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7932848264043522,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0,
-        "F1": {
-            "relevant": 78,
-            "irrelevant": 34
-        },
-        "word": "could",
-        "iter": 29,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7918427710330138,
-                "dev": 0.8303408521303258
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.045,
-        "F1": {
-            "relevant": 89,
-            "irrelevant": 58
-        },
-        "word": "made",
-        "iter": 30,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.790883597551235,
-                "dev": 0.8302391719425184
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.041666666666666664,
-        "F1": {
-            "relevant": 85,
-            "irrelevant": 13
-        },
-        "word": "seen",
-        "iter": 31,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.791283680170848,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 0
-    },
-    {
-        "polarity": 0.125,
-        "F1": {
-            "relevant": 30,
-            "irrelevant": 88
-        },
-        "word": "pretty",
-        "iter": 32,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7908847111137326,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.125,
-        "F1": {
-            "relevant": 26,
-            "irrelevant": 60
-        },
-        "word": "much",
-        "iter": 33,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7932848952079234,
-                "dev": 0.8403208020050126
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.125,
-        "F1": {
-            "relevant": 56,
-            "irrelevant": 72
-        },
-        "word": "think",
-        "iter": 34,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7924844625557766,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.06818181818181818,
-        "F1": {
-            "relevant": 45,
-            "irrelevant": 48
-        },
-        "word": "acting",
-        "iter": 35,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7924837453425332,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.14583333333333334,
-        "F1": {
-            "relevant": 50,
-            "irrelevant": 42
-        },
-        "word": "know",
-        "iter": 36,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7923245776511679,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.125,
-        "F1": {
-            "relevant": 67,
-            "irrelevant": 22
-        },
-        "word": "actually",
-        "iter": 37,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7928042010562852,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.0546875,
-        "F1": {
-            "relevant": 88,
-            "irrelevant": 53
-        },
-        "word": "show",
-        "iter": 38,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7921643470553417,
-                "dev": 0.8501207729468598
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.0625,
-        "F1": {
-            "relevant": 88,
-            "irrelevant": 23
-        },
-        "word": "enough",
-        "iter": 39,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7926444591151015,
-                "dev": 0.8401288244766505
-            }
-        },
-        "polarityLevel": 1
-    },
-    {
-        "polarity": 0.2375,
-        "F1": {
-            "relevant": 31,
-            "irrelevant": 90
-        },
-        "word": "like",
-        "iter": 40,
-        "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7926446714639612,
-                "dev": 0.8401288244766505
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.29169999999999996,
-        "F1": {
-            "relevant": 28,
-            "irrelevant": 68
-        },
-        "word": "well",
-        "iter": 41,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7912824300128077,
-                "dev": 0.8301368760064411
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.375,
-        "F1": {
-            "relevant": 57,
-            "irrelevant": 84
-        },
-        "word": "really",
-        "iter": 42,
-        "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.2375,
-        "F1": {
-            "relevant": 14,
-            "irrelevant": 29
-        },
-        "word": "characters",
-        "iter": 43,
-        "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7912847488589851,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.38952173913043475,
+        "polarityLevel": -3,
         "F1": {
             "relevant": 21,
-            "irrelevant": 35
-        },
-        "word": "best",
-        "iter": 44,
+            "irrelevant": 67
+        }
+    },
+    {
+        "polarity": -0.875,
+        "word": "awful",
         "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7898426833290796,
-                "dev": 0.8351866750471402
-            }
-        },
-        "polarityLevel": 2
+        "polarityLevel": -3,
+        "F1": {
+            "relevant": 20,
+            "irrelevant": 42
+        }
+    },
+    { // ?
+        "polarity": -1.0,
+        "word": "worst",
+        "F1Level": 0,
+        "polarityLevel": -3,
+        "F1": {
+            "relevant": 52,
+            "irrelevant": 50
+        }
     },
     {
-        "polarity": 0.4938518518518518,
-        "F1": {
-            "relevant": 36,
-            "irrelevant": 27
-        },
-        "word": "better",
-        "iter": 45,
+        "polarity": -0.75,
+        "word": "stupid",
         "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7917644180628473,
-                "dev": 0.8601127214170693
-            }
-        },
-        "polarityLevel": 2
+        "polarityLevel": -3,
+        "F1": {
+            "relevant": 57,
+            "irrelevant": 21
+        }
     },
     {
-        "polarity": 0.375,
-        "F1": {
-            "relevant": 59,
-            "irrelevant": 59
-        },
-        "word": "love",
-        "iter": 46,
-        "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7908043098924815,
-                "dev": 0.8203251706142112
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.20833333333333334,
-        "F1": {
-            "relevant": 67,
-            "irrelevant": 26
-        },
-        "word": "new",
-        "iter": 47,
+        "polarity": -0.875,
+        "word": "unfortunately",
         "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7922445248952726,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.3125,
-        "F1": {
-            "relevant": 55,
-            "irrelevant": 15
-        },
-        "word": "kind",
-        "iter": 48,
-        "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7922444078790681,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.34375,
-        "F1": {
-            "relevant": 84,
-            "irrelevant": 14
-        },
-        "word": "interesting",
-        "iter": 49,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7918449879329753,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 2
-    },
-    {
-        "polarity": 0.515625,
+        "polarityLevel": -3,
         "F1": {
             "relevant": 76,
-            "irrelevant": 13
-        },
-        "word": "good",
-        "iter": 50,
+            "irrelevant": 19
+        }
+    },
+    {
+        "polarity": -0.75,
+        "word": "hell",
         "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7944038738583477,
-                "dev": 0.8451753614079196
-            }
-        },
-        "polarityLevel": 3
-    },
-    {
-        "polarity": 0.75,
+        "polarityLevel": -3,
         "F1": {
-            "relevant": 25,
-            "irrelevant": 60
-        },
-        "word": "beautiful",
-        "iter": 51,
+            "relevant": 77,
+            "irrelevant": 11
+        }
+    },
+    /* ----------------------------------------------------------- */
+    {//delete
+        "polarity": -0.5,
+        "word": "poor",
+        "F1Level": -3,
+        "polarityLevel": -2,
+        "F1": {
+            "relevant": 21,
+            "irrelevant": 85
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "confusing",
         "F1Level": -2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7920039190784842,
-                "dev": 0.8402251030047231
-            }
-        },
-        "polarityLevel": 3
-    },
-    {
-        "polarity": 0.575,
+        "polarityLevel": -2,
         "F1": {
-            "relevant": 72,
-            "irrelevant": 81
-        },
-        "word": "loved",
-        "iter": 52,
+            "relevant": 34,
+            "irrelevant": 75
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "fails",
         "F1Level": -1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7909647561397197,
-                "dev": 0.8502709755118425
-            }
-        },
-        "polarityLevel": 3
-    },
-    {
-        "polarity": 0.5,
+        "polarityLevel": -2,
         "F1": {
-            "relevant": 73,
-            "irrelevant": 61
-        },
-        "word": "great",
-        "iter": 53,
+            "relevant": 47,
+            "irrelevant": 80
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "waste",
+        "F1Level": 0,
+        "polarityLevel": -2,
+        "F1": {
+            "relevant": 37,
+            "irrelevant": 38
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "dull",
         "F1Level": 1,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7883215444182684,
-                "dev": 0.8302391719425184
-            }
-        },
-        "polarityLevel": 3
-    },
-    {
-        "polarity": 0.609375,
+        "polarityLevel": -2,
         "F1": {
-            "relevant": 80,
-            "irrelevant": 43
-        },
-        "word": "impressive",
-        "iter": 0,
+            "relevant": 53,
+            "irrelevant": 27
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "pointless",
         "F1Level": 2,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7872034701871734,
-                "dev": 0.8251979886863609
-            }
-        },
-        "polarityLevel": 3
+        "polarityLevel": -2,
+        "F1": {
+            "relevant": 59,
+            "irrelevant": 18
+        }
+    },
+    { // keep
+        "polarity": -0.5,
+        "word": "annoying",
+        "F1Level": 3,
+        "polarityLevel": -2,
+        "F1": {
+            "relevant": 84,
+            "irrelevant": 13
+        }
+    },
+    /* ----------------------------------------------------------- */
+    {//keep
+        "polarity": 0.0,
+        "word": "nothing",
+        "F1Level": -3,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 11,
+            "irrelevant": 77
+        }
+    },
+    {// keep
+        "polarity": -0.375,
+        "word": "avoid",
+        "F1Level": -2,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 39,
+            "irrelevant": 81
+        }
+    },
+    {// keep
+        "polarity": -0.25,
+        "word": "mean",
+        "F1Level": -1,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 13,
+            "irrelevant": 45
+        }
+    },
+    {// keep
+        "polarity": -0.25,
+        "word": "cheap",
+        "F1Level": 0,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 54,
+            "irrelevant": 53
+        }
+    },
+    {// keep
+        "polarity": -0.25,
+        "word": "nowhere",
+        "F1Level": 1,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 44,
+            "irrelevant": 22
+        }
+    },
+    {// keep
+        "polarity": -0.25,
+        "word": "anyway",
+        "F1Level": 2,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 69,
+            "irrelevant": 21
+        }
+    },
+    { // keep
+        "polarity": -0.375,
+        "word": "weak",
+        "F1Level": 3,
+        "polarityLevel": -1,
+        "F1": {
+            "relevant": 75,
+            "irrelevant": 14
+        }
+    },
+    /* ----------------------------------------------------------- */
+    {// keep
+        "polarity": 0.25,
+        "word": "indeed",
+        "F1Level": -3,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 11,
+            "irrelevant": 81
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "including",
+        "F1Level": -3,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 14,
+            "irrelevant": 82
+        }
     },
     {
-        "polarity": 0.5,
+        "polarity": 0.0,
+        "word": "oscar",
+        "F1Level": -2,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 22,
+            "irrelevant": 74
+        }
+    },
+    {// keep
+        "polarity": 0.25,
+        "word": "life",
+        "F1Level": -2,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 38,
+            "irrelevant": 79
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "oh",
+        "F1Level": -1,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 14,
+            "irrelevant": 47
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "prior",
+        "F1Level": -1,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 31,
+            "irrelevant": 52
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "us",
+        "F1Level": 0,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 12,
+            "irrelevant": 27
+        }
+    },
+    {
+        "polarity": 0.125,
+        "word": "reading",
+        "F1Level": 0,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 78,
+            "irrelevant": 69
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "documentary",
+        "F1Level": 1,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 57,
+            "irrelevant": 36
+        }
+    },
+    {// keep
+        "polarity": -0.125,
+        "word": "thing",
+        "F1Level": 1,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 63,
+            "irrelevant": 42
+        }
+    },
+    {// keep
+        "polarity": 0.0,
+        "word": "script",
+        "F1Level": 2,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 54,
+            "irrelevant": 12
+        }
+    },
+    {// keep
+        "polarity": -0.125,
+        "word": "future",
+        "F1Level": 2,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 63,
+            "irrelevant": 16
+        }
+    },
+    {
+        "polarity": 0.0,
+        "word": "someone",
+        "F1Level": 3,
+        "polarityLevel": 0,
+        "F1": {
+            "relevant": 90,
+            "irrelevant": 15
+        }
+    },
+    {
+        "polarity": 0.0,
+        "word": "plot",
+        "F1Level": 3,
+        "polarityLevel": 0,
         "F1": {
             "relevant": 89,
-            "irrelevant": 21
+            "irrelevant": 11
+        }
+    },
+    /* ----------------------------------------------------------- */
+    {// keep
+        "F1": {
+            "relevant": 20,
+            "irrelevant": 82
         },
-        "word": "obviously",
-        "iter": 54,
-        "F1Level": 3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.792484064101748,
-                "dev": 0.8451753614079196
-            }
+        "word": "experienced",
+        "polarityLevel": 1,
+        "polarity": 0.5,
+        "F1Level": -3
+    },
+    {// delete?
+        "F1": {
+            "relevant": 19,
+            "irrelevant": 65
         },
-        "polarityLevel": 3
+        "word": "definitely",
+        "polarityLevel": 1,
+        "polarity": 0.5,
+        "F1Level": -2
+    },
+    {// keep
+        "F1": {
+            "relevant": 61,
+            "irrelevant": 90
+        },
+        "word": "actually",
+        "polarityLevel": 1,
+        "polarity": 0.375,
+        "F1Level": -1
+    },
+    {// keep
+        "F1": {
+            "relevant": 60,
+            "irrelevant": 66
+        },
+        "word": "heart",
+        "polarityLevel": 1,
+        "polarity": 0.5,
+        "F1Level": 0
     },
     {
-        "polarity": 0.5,
         "F1": {
-            "relevant": 29,
-            "irrelevant": 89
+            "relevant": 62,
+            "irrelevant": 22
         },
-        "word": "absolutely",
-        "iter": 55,
+        "word": "like",
+        "polarityLevel": 1,
+        "polarity": 0.5,
+        "F1Level": 1
+    },
+    {//keep
+        "F1": {
+            "relevant": 69,
+            "irrelevant": 26
+        },
+        "word": "idea",
+        "polarityLevel": 1,
+        "polarity": 0.5,
+        "F1Level": 2
+    },
+    {// keep
+        "F1": {
+            "relevant": 79,
+            "irrelevant": 18
+        },
+        "word": "highly",
+        "polarityLevel": 1,
+        "polarity": 0.375,
+        "F1Level": 3
+    },
+    /* ----------------------------------------------------------- */
+    {// keep
+        "F1": {
+            "relevant": 15,
+            "irrelevant": 90
+        },
+        "word": "worth",
+        "polarityLevel": 2,
+        "polarity": 0.625,
+        "F1Level": -3
+    },
+    {
+        "F1": {
+            "relevant": 33,
+            "irrelevant": 84
+        },
+        "word": "important",
+        "polarityLevel": 2,
+        "polarity": 0.75,
+        "F1Level": -2
+    },
+    {// keep
+        "F1": {
+            "relevant": 41,
+            "irrelevant": 63
+        },
+        "word": "recommended",
+        "polarityLevel": 2,
+        "polarity": 0.75,
+        "F1Level": -1
+    },
+    {// keep
+        "F1": {
+            "relevant": 72,
+            "irrelevant": 74
+        },
+        "word": "shines",
+        "polarityLevel": 2,
+        "polarity": 0.625,
+        "F1Level": 0
+    },
+    {// keep
+        "F1": {
+            "relevant": 51,
+            "irrelevant": 23
+        },
+        "word": "well",
+        "polarityLevel": 2,
+        "polarity": 0.625,
+        "F1Level": 1
+    },
+    {
+        "F1": {
+            "relevant": 88,
+            "irrelevant": 37
+        },
+        "word": "inspiring",
+        "polarityLevel": 2,
+        "polarity": 0.625,
+        "F1Level": 2
+    },
+    {
+        "F1": {
+            "relevant": 90,
+            "irrelevant": 22
+        },
+        "word": "powerful",
+        "polarityLevel": 2,
+        "polarity": 0.75,
+        "F1Level": 3
+    },
+    /* ----------------------------------------------------------- */
+    {
+        "F1": {
+            "relevant": 10,
+            "irrelevant": 81
+        },
+        "word": "amazing",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": -3
+    },
+    {
+        "F1": {
+            "relevant": 30,
+            "irrelevant": 74
+        },
+        "word": "best",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": -2
+    },
+    {
+        "F1": {
+            "relevant": 30,
+            "irrelevant": 61
+        },
+        "word": "love",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": -1
+    },
+    {
+        "F1": {
+            "relevant": 47,
+            "irrelevant": 49
+        },
+        "word": "enjoy",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": 0
+    },
+    {
+        "F1": {
+            "relevant": 89,
+            "irrelevant": 57
+        },
+        "word": "attractive",
+        "polarityLevel": 3,
+        "polarity": 0.875,
+        "F1Level": 1
+    },
+    {
+        "F1": {
+            "relevant": 79,
+            "irrelevant": 29
+        },
+        "word": "amusing",
+        "polarityLevel": 3,
+        "polarity": 0.875,
+        "F1Level": 2
+    },
+    {
+        "F1": {
+            "relevant": 81,
+            "irrelevant": 17
+        },
+        "word": "good",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": 3
+    },
+    {// this is only for backup
+        "F1": {
+            "relevant": 81,
+            "irrelevant": 17
+        },
+        "word": "loved",
+        "polarityLevel": 3,
+        "polarity": 1.0,
+        "F1Level": 3
+    },
+    {// this is only for backup
+        "polarity": -0.75,
+        "word": "worse",
         "F1Level": -3,
-        "F1_true": {
-            "keep": {
-                "train": 1.0,
-                "test": 0.7925646241412484,
-                "dev": 0.8451753614079196
-            },
-            "del": {
-                "train": 1.0,
-                "test": 0.7927246205746139,
-                "dev": 0.8352692626346314
-            }
-        },
-        "polarityLevel": 3
+        "polarityLevel": -3,
+        "F1": {
+            "relevant": 10,
+            "irrelevant": 83
+        }
     }
-];
+]

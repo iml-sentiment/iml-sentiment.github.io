@@ -20,7 +20,7 @@ function ($scope, dataService, communService) {
     $scope.stage = 'intro';
     $scope.running = false;
 
-    $scope.enableSubmitSecond = 2;
+    $scope.enableSubmitSecond = 1;
 
     // for recording score
     $scope.interview = {example: null, polarity: null, score: null, score_i: null};
@@ -54,7 +54,7 @@ function ($scope, dataService, communService) {
     $scope.iterlog = []; // log the information of each iteration
     $scope.iterAction = [];
     $scope.iterNum = -2; // get the iteration number. When editing 1st word: iter 0
-    $scope.totalIter = 55;
+    $scope.totalIter = 56;
     $scope.F1 = null;
 
     // when an algorithm option is selected from the bar
@@ -167,10 +167,9 @@ function ($scope, dataService, communService) {
 
 
     $scope.displayDoc = function (featureDoc) {
-        arr = [];
-        data = featureDoc.map(function(doc){
-            arr = arr.concat([doc.displayArr[0]]);
-        });
+        arr = featureDoc.map(function(doc){
+            return doc.display;
+        }).slice(0, 10);
         return arr;
     };
     

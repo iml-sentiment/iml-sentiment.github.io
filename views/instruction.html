@@ -119,11 +119,15 @@
       <div class="item fix-height">
           <div class="resize">
               <div class="col-md-4">
-                  <p>You should submit your decision with on one of the two submit buttons
-                      (labeled relevant / not relevant); this will take you to the next question.</p>
+                  <p>You should submit your decision with on one of the two submit buttons;
+                      this will take you to the next question.
+                      Please try to complete the survey <span class="highlight">continuously</span>
+                      , as we will also
+                      <span class="highlight">record your time</span> spent on each question.
+                  </p>
 
                   <p>You can only submit after the question has been displayed for
-                      <span class="highlight">{{ enableSubmitSecond }} seconds</span>.</p>
+                      <span class="highlight">{{ enableSubmitSecond }} second</span>.</p>
                     <button class="btn btn-success"
                           ng-click=currentStage('quiz') role="button">I understand!!</button>
                   </div>
