@@ -137,7 +137,7 @@ const featurelist =[
         "polarityLevel": -3,
         "F1": {
             "relevant": 57,
-            "irrelevant": 21
+            "irrelevant": 30
         }
     },
     {
@@ -188,7 +188,7 @@ const featurelist =[
         "polarityLevel": -2,
         "F1": {
             "relevant": 47,
-            "irrelevant": 80
+            "irrelevant": 70
         }
     },
     { // keep
@@ -259,7 +259,7 @@ const featurelist =[
         "polarityLevel": -1,
         "F1": {
             "relevant": 13,
-            "irrelevant": 45
+            "irrelevant": 35
         }
     },
     {// keep
@@ -350,7 +350,7 @@ const featurelist =[
         "polarityLevel": 0,
         "F1": {
             "relevant": 14,
-            "irrelevant": 47
+            "irrelevant": 37
         }
     },
     {// keep
@@ -370,7 +370,7 @@ const featurelist =[
         "polarityLevel": 0,
         "F1": {
             "relevant": 12,
-            "irrelevant": 27
+            "irrelevant": 21
         }
     },
     {
@@ -467,7 +467,7 @@ const featurelist =[
     {// keep
         "F1": {
             "relevant": 61,
-            "irrelevant": 90
+            "irrelevant": 85
         },
         "word": "actually",
         "polarityLevel": 1,
@@ -486,7 +486,7 @@ const featurelist =[
     },
     {
         "F1": {
-            "relevant": 62,
+            "relevant": 53,
             "irrelevant": 22
         },
         "word": "like",
@@ -609,7 +609,7 @@ const featurelist =[
     {
         "F1": {
             "relevant": 30,
-            "irrelevant": 61
+            "irrelevant": 57
         },
         "word": "love",
         "polarityLevel": 3,
@@ -628,7 +628,7 @@ const featurelist =[
     },
     {
         "F1": {
-            "relevant": 89,
+            "relevant": 86,
             "irrelevant": 57
         },
         "word": "attractive",
