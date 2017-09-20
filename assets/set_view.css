@@ -142,7 +142,7 @@ td {
   padding-right: 2px; }
 
 tr:nth-child(even) {
-  background-color: #eee; }
+  /*background-color: #eee;*/ }
 
 th {
   text-align: left;

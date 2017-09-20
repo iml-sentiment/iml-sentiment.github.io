@@ -317,6 +317,10 @@ body {
     margin-left: 0px;
 }
 
+tr {
+    fill-opacity: 0!important;
+}
+
 
 .table-condensed>thead>tr>th,
 .table-condensed>tbody>tr>th,
@@ -375,4 +379,9 @@ input[type="radio"] {
 
 .highlight {
   font-weight: bold;
+}
+
+
+.jumbotron {
+    background-color: #f9f9f9!important;
 }
